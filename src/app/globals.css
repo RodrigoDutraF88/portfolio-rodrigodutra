@@ -30,8 +30,8 @@
   --foreground: #e7ebf0;
   --muted: #98a2b3;
   --border: #232b38;
-  --accent: #5cd6a0;
-  --accent-foreground: #06231a;
+  --accent: #58a6ff;
+  --accent-foreground: #041227;
 }
 
 /* Light is a first class alternate. */
@@ -42,7 +42,7 @@
   --foreground: #10151c;
   --muted: #55606e;
   --border: #e2e6ec;
-  --accent: #0f7a45;
+  --accent: #0b5fd0;
   --accent-foreground: #ffffff;
 }
 

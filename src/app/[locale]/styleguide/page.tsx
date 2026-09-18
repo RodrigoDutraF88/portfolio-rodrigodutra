@@ -116,14 +116,23 @@ export default async function StyleGuide({ params }: { params: Promise<{ locale:
         </p>
       </Section>
 
-      <Section label="surface card">
-        <article className="bg-surface rounded-[var(--radius-card)] border border-[var(--border)] p-5">
-          <p className="text-muted font-mono text-xs">project</p>
-          <h3 className="mt-1 text-lg font-semibold">bookshelf-app</h3>
-          <p className="text-muted mt-2 text-sm">
-            Full stack reading tracker built with Next.js, tRPC, Prisma, and PostgreSQL.
-          </p>
-        </article>
+      <Section label="project cards, two per row">
+        <div className="grid gap-3 sm:grid-cols-2">
+          <article className="bg-surface rounded-[var(--radius-card)] border border-[var(--border)] p-5">
+            <p className="text-muted font-mono text-xs">project</p>
+            <h3 className="mt-1 text-lg font-semibold">bookshelf-app</h3>
+            <p className="text-muted mt-2 text-sm">
+              Full stack reading tracker built with Next.js, tRPC, Prisma, and PostgreSQL.
+            </p>
+          </article>
+          <article className="bg-surface rounded-[var(--radius-card)] border border-[var(--border)] p-5">
+            <p className="text-muted font-mono text-xs">project</p>
+            <h3 className="mt-1 text-lg font-semibold">AlgoCards</h3>
+            <p className="text-muted mt-2 text-sm">
+              Spaced repetition flashcards for algorithms and data structures, built with FSRS.
+            </p>
+          </article>
+        </div>
       </Section>
     </main>
   );

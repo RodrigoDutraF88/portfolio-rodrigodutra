@@ -8,6 +8,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center px-4 py-24 sm:px-6">
+      {/* Reserved space for a profile photo. Day 4 swaps this for next/image with the real photo. */}
+      <div
+        aria-label="Foto de Rodrigo Dutra"
+        className="bg-surface text-muted mb-8 flex size-24 items-center justify-center overflow-hidden rounded-full border border-[var(--border)] font-mono text-xs"
+      >
+        foto
+      </div>
       <p className="text-muted font-mono text-sm">
         <span className="text-accent">~</span> $ whoami
       </p>
