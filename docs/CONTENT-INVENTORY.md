@@ -9,7 +9,7 @@ Status key: `todo`, `draft`, `done`.
 
 | Section        | Purpose                                  | pt   | en   | it   |
 | -------------- | ---------------------------------------- | ---- | ---- | ---- |
-| Hero           | Name, role, one line pitch, prompt motif | todo | todo | todo |
+| Hero           | Photo, name, role, one line pitch        | todo | todo | todo |
 | About          | Who I am, full stack and systems story   | todo | todo | todo |
 | Skills         | Grouped tools and languages with context | todo | todo | todo |
 | Experience     | UnB and CJR timeline                     | todo | todo | todo |

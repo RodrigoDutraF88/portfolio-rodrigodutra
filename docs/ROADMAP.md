@@ -15,23 +15,23 @@ the `gh` CLI is set up.
 
 ## Days
 
-| Day | Focus                   | Result                                              |
-| --- | ----------------------- | --------------------------------------------------- |
-| 1   | Foundation and docs     | App scaffolded, tooling set, docs written           |
-| 2   | Design system           | Tokens, theme, fonts, base layout, style guide page |
-| 3   | i18n                    | pt, en, it routing, switcher, pt catalog complete   |
-| 4   | Hero and navigation     | Terminal hero, nav, command palette, footer         |
-| 5   | About and skills        | Bio, skills grid, experience timeline               |
-| 6   | Projects data and cards | Typed content, filterable grid                      |
-| 7   | Project detail pages    | Case studies for the main projects                  |
-| 8   | GitHub and systems      | Build time data, homelab and systems section        |
-| 9   | Contact and motion      | Links, resume, purposeful animation pass            |
-| 10  | SEO and metadata        | Metadata, Open Graph, sitemap, hreflang, JSON-LD    |
-| 11  | a11y and performance    | Keyboard, contrast, images, Lighthouse tuning       |
-| 12  | English content         | en catalog filled, pt proofread                     |
-| 13  | Testing and CI          | Unit tests, smoke tests, GitHub Actions             |
-| 14  | Deploy                  | Vercel, analytics, domain                           |
-| 15  | Launch and Italian      | it content, final QA, repo descriptions, launch     |
+| Day | Focus                   | Result                                                 |
+| --- | ----------------------- | ------------------------------------------------------ |
+| 1   | Foundation and docs     | App scaffolded, tooling set, docs written              |
+| 2   | Design system           | Tokens, theme, fonts, base layout, style guide page    |
+| 3   | i18n                    | pt, en, it routing, switcher, pt catalog complete      |
+| 4   | Hero and navigation     | Terminal hero with profile photo, nav, palette, footer |
+| 5   | About and skills        | Bio, skills grid, experience timeline                  |
+| 6   | Projects data and cards | Typed content, filterable grid, two projects per row   |
+| 7   | Project detail pages    | Case studies for the main projects                     |
+| 8   | GitHub and systems      | Build time data, homelab and systems section           |
+| 9   | Contact and motion      | Links, resume, purposeful animation pass               |
+| 10  | SEO and metadata        | Metadata, Open Graph, sitemap, hreflang, JSON-LD       |
+| 11  | a11y and performance    | Keyboard, contrast, images, Lighthouse tuning          |
+| 12  | English content         | en catalog filled, pt proofread                        |
+| 13  | Testing and CI          | Unit tests, smoke tests, GitHub Actions                |
+| 14  | Deploy                  | Vercel, analytics, domain                              |
+| 15  | Launch and Italian      | it content, final QA, repo descriptions, launch        |
 
 ## Priority if time runs short
 
