@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Style Guide",
@@ -27,20 +27,20 @@ function Section({ label, children }: { label: string; children: React.ReactNode
   );
 }
 
-export default function StyleGuide() {
+export default async function StyleGuide({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
-    <main className="mx-auto w-full max-w-3xl px-4 py-14 sm:px-6">
-      <header className="flex items-start justify-between gap-4">
-        <div>
-          <p className="text-muted font-mono text-sm">
-            <span className="text-accent">~/portfolio</span> $ cat style-guide
-          </p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight">Style Guide</h1>
-          <p className="text-muted mt-2 max-w-md text-sm">
-            The tokens and primitives the site is built from. Toggle the theme to check both.
-          </p>
-        </div>
-        <ThemeToggle />
+    <main className="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6">
+      <header>
+        <p className="text-muted font-mono text-sm">
+          <span className="text-accent">~/portfolio</span> $ cat style-guide
+        </p>
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight">Style Guide</h1>
+        <p className="text-muted mt-2 max-w-md text-sm">
+          The tokens and primitives the site is built from. Toggle the theme to check both.
+        </p>
       </header>
 
       <Section label="color">
