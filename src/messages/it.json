@@ -1,6 +1,30 @@
 {
-  "home": {
-    "intro": "Ingegnere del software e studente alla UnB. Costruisco applicazioni full stack e mi appassiona il lavoro sui sistemi, dal browser al terminale.",
-    "construction": "sito in costruzione. vedi la <link>guida di stile</link>."
+  "nav": {
+    "about": "Chi sono",
+    "projects": "Progetti",
+    "systems": "Sistemi",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "role": "Ingegnere del software e studente alla UnB",
+    "tagline": "Costruisco applicazioni full stack e mi appassiona il lavoro sui sistemi, dal browser al terminale.",
+    "viewProjects": "Vedi i progetti",
+    "getInTouch": "Mettiti in contatto"
+  },
+  "palette": {
+    "trigger": "Apri la palette dei comandi",
+    "placeholder": "Cerca o salta a...",
+    "empty": "Nessun risultato.",
+    "navigate": "Naviga",
+    "language": "Lingua",
+    "theme": "Tema",
+    "links": "Link",
+    "home": "Inizio",
+    "styleGuide": "Guida di stile",
+    "toggleTheme": "Cambia tema"
+  },
+  "footer": {
+    "builtWith": "Costruito con Next.js.",
+    "backToTop": "Torna su"
   }
 }

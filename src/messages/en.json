@@ -1,6 +1,30 @@
 {
-  "home": {
-    "intro": "Software engineer and student at UnB. I build full stack apps and enjoy systems work, from the browser to the terminal.",
-    "construction": "site under construction. see the <link>style guide</link>."
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "systems": "Systems",
+    "contact": "Contact"
+  },
+  "hero": {
+    "role": "Software engineer and student at UnB",
+    "tagline": "I build full stack apps and enjoy systems work, from the browser to the terminal.",
+    "viewProjects": "View projects",
+    "getInTouch": "Get in touch"
+  },
+  "palette": {
+    "trigger": "Open command palette",
+    "placeholder": "Search or jump to...",
+    "empty": "No results.",
+    "navigate": "Navigate",
+    "language": "Language",
+    "theme": "Theme",
+    "links": "Links",
+    "home": "Home",
+    "styleGuide": "Style guide",
+    "toggleTheme": "Toggle theme"
+  },
+  "footer": {
+    "builtWith": "Built with Next.js.",
+    "backToTop": "Back to top"
   }
 }
