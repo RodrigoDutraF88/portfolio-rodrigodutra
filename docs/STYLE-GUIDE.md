@@ -23,15 +23,18 @@ Defined as CSS variables in `globals.css` and exposed to Tailwind through `@them
 | `surface`    | Cards and raised areas                                 |
 
 The accent is blue: `#58a6ff` on dark and `#0b5fd0` on light. It is the single chromatic color on
-an otherwise cool neutral canvas.
+an otherwise cool neutral canvas. The one exception is the skill badges, which tint softly by
+brand logo so the stack reads at a glance.
 
-Dark is the primary theme. Light is a first class alternate, not an afterthought. Both are
+Light is the default theme. Dark is a first class alternate, not an afterthought. Both are
 defined with the same tokens so nothing hardcodes a hex value in a component.
 
 ## Layout
 
 - The home page opens with a profile photo at the top of the hero. It is a round frame that holds
   a real photo, reserved even before the image is in place.
+- Cards use a neobrutalist treatment: a solid stroke and a hard offset shadow (`.brutal`), with a
+  pressable variant for buttons (`.brutal-press`). Applied sparingly so the terminal calm holds.
 - Projects are shown as a grid of cards, two per row on desktop and one per row on phones.
 - Content sits in a single centered column with a generous gutter, never edge to edge.
 

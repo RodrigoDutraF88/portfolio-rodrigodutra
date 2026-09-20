@@ -11,6 +11,45 @@
     "viewProjects": "View projects",
     "getInTouch": "Get in touch"
   },
+  "about": {
+    "label": "about",
+    "lead": "Hi, I'm Rodrigo.",
+    "body": "I'm a full stack developer and a Software Engineering student at UnB. I like building end to end, from the database to the interface, and understanding what runs underneath: systems, Linux, and the command line.",
+    "body2": "Away from code, I'm usually trying a new tool, tinkering with my homelab, or reading about compilers. That's pretty much me.",
+    "location": "Brasília, Brazil"
+  },
+  "skills": {
+    "label": "skills",
+    "groups": {
+      "languages": "Languages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "systems": "Systems and tools"
+    },
+    "context": {
+      "languages": "The languages I reach for daily, from scripts to data structures in C.",
+      "frontend": "Fast, accessible interfaces, built around components and types.",
+      "backend": "APIs, auth, and data, from prototype to deploy.",
+      "systems": "Where the code runs: Linux, containers, and version control."
+    }
+  },
+  "experience": {
+    "label": "experience",
+    "items": {
+      "unb": {
+        "role": "Software Engineering",
+        "org": "University of Brasília",
+        "when": "In progress",
+        "body": "Studying Software Engineering at UnB, focused on data structures, compilers, and systems."
+      },
+      "cjr": {
+        "role": "Backend · ValeteDeCopas",
+        "org": "CJR · Junior Enterprise",
+        "when": "Selection process",
+        "body": "Built the backend of a marketplace for CJR's selection process, covering auth, listings, and orders."
+      }
+    }
+  },
   "palette": {
     "trigger": "Open command palette",
     "placeholder": "Search or jump to...",

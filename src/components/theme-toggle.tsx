@@ -5,7 +5,7 @@ import { getTheme, subscribeTheme, toggleTheme } from "@/lib/theme";
 
 /** Flips between the dark and light themes, reading the live theme from the document. */
 export function ThemeToggle() {
-  const theme = useSyncExternalStore(subscribeTheme, getTheme, () => "dark" as const);
+  const theme = useSyncExternalStore(subscribeTheme, getTheme, () => "light" as const);
 
   return (
     <button

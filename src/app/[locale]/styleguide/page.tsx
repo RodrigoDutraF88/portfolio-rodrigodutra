@@ -32,7 +32,7 @@ export default async function StyleGuide({ params }: { params: Promise<{ locale:
   setRequestLocale(locale);
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6">
+    <main className="mx-auto w-full max-w-2xl px-4 py-8 sm:px-6">
       <header>
         <p className="text-muted font-mono text-sm">
           <span className="text-accent">~/portfolio</span> $ cat style-guide
@@ -90,16 +90,40 @@ export default async function StyleGuide({ params }: { params: Promise<{ locale:
       </Section>
 
       <Section label="buttons">
-        <div className="flex flex-wrap gap-3">
-          <button className="bg-accent text-accent-foreground rounded-md px-4 py-2 text-sm font-medium transition-opacity hover:opacity-90">
+        <div className="flex flex-wrap items-center gap-3">
+          <button className="bg-accent text-accent-foreground brutal brutal-press rounded-lg px-4 py-2 text-sm font-medium">
             Primary action
           </button>
-          <button className="text-foreground rounded-md border border-[var(--border)] px-4 py-2 text-sm font-medium transition-colors hover:border-[var(--accent)]">
+          <button className="bg-surface brutal brutal-press rounded-lg px-4 py-2 text-sm font-medium">
             Secondary
           </button>
           <button className="text-muted hover:text-foreground rounded-md px-4 py-2 font-mono text-sm transition-colors">
             ghost
           </button>
+        </div>
+      </Section>
+
+      <Section label="neobrutalist card and badges">
+        <div className="brutal bg-surface p-5">
+          <h3 className="text-base font-semibold tracking-tight">Solid stroke, hard shadow</h3>
+          <p className="text-muted mt-1 text-sm">
+            A raised surface with a solid stroke and an offset shadow. Used for the about, skills,
+            and experience cards.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2 font-mono text-xs">
+            <span className="pill" style={{ "--brand": "var(--accent)" } as React.CSSProperties}>
+              accent
+            </span>
+            <span className="pill" style={{ "--brand": "#f59e0b" } as React.CSSProperties}>
+              amber
+            </span>
+            <span className="pill" style={{ "--brand": "#8b5cf6" } as React.CSSProperties}>
+              violet
+            </span>
+            <span className="pill" style={{ "--brand": "#f43f5e" } as React.CSSProperties}>
+              rose
+            </span>
+          </div>
         </div>
       </Section>
 

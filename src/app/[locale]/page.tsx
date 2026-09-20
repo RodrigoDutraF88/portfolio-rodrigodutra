@@ -1,15 +1,22 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { externalLinks } from "@/lib/site";
+import { externalLinks, site } from "@/lib/site";
 import { AsciiField } from "@/components/ascii-field";
 import { LogoMarquee } from "@/components/logo-marquee";
+import { Skills } from "@/components/skills";
+import { Reveal } from "@/components/reveal";
 
 const revealStyle = (ms: number) => ({ "--reveal-delay": `${ms}ms` }) as React.CSSProperties;
+
+// Language neutral: the id drives the translated role, org, and body.
+const experience = ["unb", "cjr"] as const;
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("hero");
+  const tAbout = await getTranslations("about");
+  const tExp = await getTranslations("experience");
 
   return (
     <>
@@ -21,54 +28,54 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <AsciiField className="size-full opacity-60" />
         </div>
 
-        <div className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6">
+        <div className="mx-auto w-full max-w-2xl px-4 py-16 sm:px-6">
           <div
             data-reveal="photo"
             style={revealStyle(0)}
-            className="bg-surface mx-auto mb-8 size-44 overflow-hidden rounded-full border border-[var(--border)] shadow-xl"
+            className="bg-surface mx-auto mb-8 size-64 overflow-hidden rounded-full border border-[var(--border)] shadow-xl"
           >
             <Image
               src="/rodrigo.jpg"
               alt="Rodrigo Dutra"
-              width={176}
-              height={176}
+              width={276}
+              height={276}
               priority
               className="size-full object-cover"
             />
           </div>
 
-          <p data-reveal style={revealStyle(90)} className="text-muted font-mono text-sm">
+          <p data-reveal style={revealStyle(590)} className="text-muted font-mono text-sm">
             <span className="text-accent">~/rodrigo</span> $ whoami
           </p>
           <h1
             data-reveal
-            style={revealStyle(170)}
+            style={revealStyle(670)}
             className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl"
           >
             Rodrigo Dutra
             <span className="cursor-blink text-accent ml-1 inline-block">▋</span>
           </h1>
-          <p data-reveal style={revealStyle(250)} className="mt-3 text-lg">
+          <p data-reveal style={revealStyle(750)} className="mt-3 text-lg">
             {t("role")}
           </p>
-          <p data-reveal style={revealStyle(330)} className="text-muted mt-3 max-w-xl text-base">
+          <p data-reveal style={revealStyle(930)} className="text-muted mt-3 max-w-xl text-base">
             {t("tagline")}
           </p>
 
           <div
             data-reveal
-            style={revealStyle(410)}
+            style={revealStyle(1210)}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
             <a
               href="#projects"
-              className="bg-accent text-accent-foreground rounded-md px-4 py-2 text-sm font-medium transition-opacity hover:opacity-90"
+              className="bg-accent text-accent-foreground brutal brutal-press rounded-lg px-4 py-2 text-sm font-medium"
             >
               {t("viewProjects")}
             </a>
             <a
               href="#contact"
-              className="rounded-md border border-[var(--border)] px-4 py-2 text-sm font-medium transition-colors hover:border-[var(--accent)]"
+              className="bg-surface brutal brutal-press rounded-lg px-4 py-2 text-sm font-medium"
             >
               {t("getInTouch")}
             </a>
@@ -76,7 +83,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
           <div
             data-reveal
-            style={revealStyle(490)}
+            style={revealStyle(1590)}
             className="text-muted mt-8 flex flex-wrap gap-4 font-mono text-xs"
           >
             {externalLinks.map((link) => (
@@ -95,12 +102,76 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       <section className="border-t border-[var(--border)] py-8">
-        <div className="mx-auto mb-4 max-w-3xl px-4 sm:px-6">
+        <Reveal className="mx-auto mb-4 max-w-2xl px-4 sm:px-6">
           <p className="text-muted font-mono text-xs tracking-widest uppercase">
             <span className="text-accent">{"// "}</span>stack
           </p>
+        </Reveal>
+        <Reveal delay={120}>
+          <LogoMarquee />
+        </Reveal>
+      </section>
+
+      <section id="about" className="border-t border-[var(--border)] py-14">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+          <Reveal>
+            <p className="text-muted font-mono text-xs tracking-widest uppercase">
+              <span className="text-accent">{"// "}</span>
+              {tAbout("label")}
+            </p>
+          </Reveal>
+          <Reveal delay={80}>
+            <article className="brutal bg-surface mt-5 p-6 sm:p-7">
+              <p className="text-xl font-semibold tracking-tight">{tAbout("lead")}</p>
+              <p className="text-muted mt-3 leading-relaxed">{tAbout("body")}</p>
+              <p className="text-muted mt-3 leading-relaxed">{tAbout("body2")}</p>
+              <div className="mt-5 flex flex-wrap items-center gap-2 font-mono text-xs">
+                <span
+                  className="pill"
+                  style={{ "--brand": "var(--accent)" } as React.CSSProperties}
+                >
+                  @{site.handle}
+                </span>
+                <span className="pill" style={{ "--brand": "#f59e0b" } as React.CSSProperties}>
+                  {tAbout("location")}
+                </span>
+              </div>
+            </article>
+          </Reveal>
         </div>
-        <LogoMarquee />
+      </section>
+
+      <Skills />
+
+      <section id="experience" className="border-t border-[var(--border)] py-14">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+          <Reveal>
+            <p className="text-muted font-mono text-xs tracking-widest uppercase">
+              <span className="text-accent">{"// "}</span>
+              {tExp("label")}
+            </p>
+          </Reveal>
+          <div className="mt-6 space-y-4">
+            {experience.map((id, index) => (
+              <Reveal key={id} delay={index * 90}>
+                <article className="brutal bg-surface p-5">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <h3 className="text-base font-semibold tracking-tight">
+                      {tExp(`items.${id}.role`)}
+                    </h3>
+                    <span className="text-muted shrink-0 font-mono text-xs">
+                      {tExp(`items.${id}.when`)}
+                    </span>
+                  </div>
+                  <p className="text-accent mt-0.5 font-mono text-xs">{tExp(`items.${id}.org`)}</p>
+                  <p className="text-muted mt-2 text-sm leading-relaxed">
+                    {tExp(`items.${id}.body`)}
+                  </p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );

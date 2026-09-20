@@ -24,15 +24,19 @@ export const metadata: Metadata = {
   description: "Engenheiro de software e estudante na UnB. Full stack e sistemas.",
 };
 
-// Applies the saved or system theme before paint so there is no flash.
+// Applies the saved theme before paint so there is no flash. Light is the
+// default; a saved choice always wins.
 const themeScript = `
+document.documentElement.classList.add('js');
 try {
   var t = localStorage.getItem('theme');
   if (t !== 'light' && t !== 'dark') {
-    t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    t = 'light';
   }
   document.documentElement.dataset.theme = t;
-} catch (e) {}
+} catch (e) {
+  document.documentElement.dataset.theme = 'light';
+}
 `;
 
 export function generateStaticParams() {

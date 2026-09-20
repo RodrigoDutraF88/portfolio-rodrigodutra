@@ -7,18 +7,18 @@ Status key: `todo`, `draft`, `done`.
 
 ## Sections
 
-| Section        | Purpose                                  | pt   | en   | it   |
-| -------------- | ---------------------------------------- | ---- | ---- | ---- |
-| Hero           | Photo, name, role, one line pitch        | todo | todo | todo |
-| About          | Who I am, full stack and systems story   | todo | todo | todo |
-| Skills         | Grouped tools and languages with context | todo | todo | todo |
-| Experience     | UnB and CJR timeline                     | todo | todo | todo |
-| Projects list  | Filterable cards                         | todo | todo | todo |
-| Project detail | Case studies per project                 | todo | todo | todo |
-| Systems        | Homelab, Linux, C and compilers          | todo | todo | todo |
-| GitHub         | Live activity and pinned repos           | todo | todo | todo |
-| Contact        | Links, email, resume                     | todo | todo | todo |
-| Footer         | Small print and secondary links          | todo | todo | todo |
+| Section        | Purpose                                  | pt    | en    | it    |
+| -------------- | ---------------------------------------- | ----- | ----- | ----- |
+| Hero           | Photo, name, role, one line pitch        | todo  | todo  | todo  |
+| About          | Who I am, full stack and systems story   | draft | draft | draft |
+| Skills         | Grouped tools and languages with context | draft | draft | draft |
+| Experience     | UnB and CJR timeline                     | draft | draft | draft |
+| Projects list  | Filterable cards                         | todo  | todo  | todo  |
+| Project detail | Case studies per project                 | todo  | todo  | todo  |
+| Systems        | Homelab, Linux, C and compilers          | todo  | todo  | todo  |
+| GitHub         | Live activity and pinned repos           | todo  | todo  | todo  |
+| Contact        | Links, email, resume                     | todo  | todo  | todo  |
+| Footer         | Small print and secondary links          | todo  | todo  | todo  |
 
 ## Projects to feature
 

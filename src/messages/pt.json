@@ -6,10 +6,49 @@
     "contact": "Contato"
   },
   "hero": {
-    "role": "Engenheiro de software e estudante na UnB",
+    "role": "Desenvolvedor Full-stack e Estudante de Engenharia de Software na UnB",
     "tagline": "Construo aplicações full stack e gosto de sistemas, do navegador ao terminal.",
     "viewProjects": "Ver projetos",
     "getInTouch": "Entrar em contato"
+  },
+  "about": {
+    "label": "sobre",
+    "lead": "Oi, eu sou o Rodrigo.",
+    "body": "Sou desenvolvedor full stack e estudante de Engenharia de Software na UnB. Gosto de construir do começo ao fim, do banco de dados à interface, e de entender o que roda por baixo: sistemas, Linux e a linha de comando.",
+    "body2": "Fora do código, quase sempre estou testando uma ferramenta nova, mexendo no meu homelab ou lendo sobre compiladores. É mais ou menos isso.",
+    "location": "Brasília, Brasil"
+  },
+  "skills": {
+    "label": "skills",
+    "groups": {
+      "languages": "Linguagens",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "systems": "Sistemas e ferramentas"
+    },
+    "context": {
+      "languages": "As linguagens do dia a dia, de scripts a estruturas de dados em C.",
+      "frontend": "Interfaces rápidas e acessíveis, pensadas em componentes e tipos.",
+      "backend": "APIs, autenticação e dados, do protótipo ao deploy.",
+      "systems": "Onde o código roda: Linux, contêineres e controle de versão."
+    }
+  },
+  "experience": {
+    "label": "experiência",
+    "items": {
+      "unb": {
+        "role": "Engenharia de Software",
+        "org": "Universidade de Brasília",
+        "when": "Em curso",
+        "body": "Curso Engenharia de Software na UnB, com foco em estruturas de dados, compiladores e sistemas."
+      },
+      "cjr": {
+        "role": "Backend · ValeteDeCopas",
+        "org": "CJR · Empresa Júnior",
+        "when": "Processo seletivo",
+        "body": "Construí o backend de um marketplace no processo seletivo da CJR, cobrindo autenticação, anúncios e pedidos."
+      }
+    }
   },
   "palette": {
     "trigger": "Abrir paleta de comandos",

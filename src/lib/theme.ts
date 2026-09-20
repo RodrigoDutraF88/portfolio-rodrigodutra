@@ -6,8 +6,8 @@ export type Theme = "dark" | "light";
 export const THEME_EVENT = "themechange";
 
 export function getTheme(): Theme {
-  if (typeof document === "undefined") return "dark";
-  return document.documentElement.dataset.theme === "light" ? "light" : "dark";
+  if (typeof document === "undefined") return "light";
+  return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
 }
 
 export function setTheme(theme: Theme): void {

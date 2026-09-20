@@ -9,7 +9,7 @@ export async function SiteHeader() {
 
   return (
     <header className="bg-background/80 sticky top-0 z-40 border-b border-[var(--border)] backdrop-blur">
-      <div className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <a href="#top" className="font-mono text-sm">
           <span className="text-accent">~</span>/rodrigo
         </a>

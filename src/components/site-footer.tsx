@@ -7,7 +7,7 @@ export async function SiteFooter() {
 
   return (
     <footer className="mt-24 border-t border-[var(--border)]">
-      <div className="mx-auto flex max-w-3xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <div className="mx-auto flex max-w-2xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <p className="text-muted font-mono text-xs">
           © {year} {site.name} · {t("builtWith")}
         </p>

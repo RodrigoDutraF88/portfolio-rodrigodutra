@@ -11,6 +11,45 @@
     "viewProjects": "Vedi i progetti",
     "getInTouch": "Mettiti in contatto"
   },
+  "about": {
+    "label": "chi sono",
+    "lead": "Ciao, sono Rodrigo.",
+    "body": "Sono uno sviluppatore full stack e studente di Ingegneria del Software alla UnB. Mi piace costruire dall'inizio alla fine, dal database all'interfaccia, e capire cosa gira sotto: sistemi, Linux e la riga di comando.",
+    "body2": "Lontano dal codice, di solito provo un nuovo strumento, smanetto sul mio homelab o leggo di compilatori. Più o meno sono questo.",
+    "location": "Brasília, Brasile"
+  },
+  "skills": {
+    "label": "competenze",
+    "groups": {
+      "languages": "Linguaggi",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "systems": "Sistemi e strumenti"
+    },
+    "context": {
+      "languages": "I linguaggi che uso ogni giorno, dagli script alle strutture dati in C.",
+      "frontend": "Interfacce veloci e accessibili, pensate a componenti e tipi.",
+      "backend": "API, autenticazione e dati, dal prototipo al deploy.",
+      "systems": "Dove gira il codice: Linux, container e controllo di versione."
+    }
+  },
+  "experience": {
+    "label": "esperienza",
+    "items": {
+      "unb": {
+        "role": "Ingegneria del Software",
+        "org": "Università di Brasília",
+        "when": "In corso",
+        "body": "Studio Ingegneria del Software alla UnB, con focus su strutture dati, compilatori e sistemi."
+      },
+      "cjr": {
+        "role": "Backend · ValeteDeCopas",
+        "org": "CJR · Impresa Junior",
+        "when": "Processo di selezione",
+        "body": "Ho costruito il backend di un marketplace per il processo di selezione della CJR, con autenticazione, annunci e ordini."
+      }
+    }
+  },
   "palette": {
     "trigger": "Apri la palette dei comandi",
     "placeholder": "Cerca o salta a...",

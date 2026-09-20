@@ -22,20 +22,8 @@
   --radius-card: 0.625rem;
 }
 
-/* Dark is the primary theme. */
+/* Light is the default theme. */
 :root {
-  color-scheme: dark;
-  --background: #0c0f14;
-  --surface: #151a23;
-  --foreground: #e7ebf0;
-  --muted: #98a2b3;
-  --border: #232b38;
-  --accent: #58a6ff;
-  --accent-foreground: #041227;
-}
-
-/* Light is a first class alternate. */
-:root[data-theme="light"] {
   color-scheme: light;
   --background: #ffffff;
   --surface: #f6f7f9;
@@ -44,6 +32,25 @@
   --border: #e2e6ec;
   --accent: #0b5fd0;
   --accent-foreground: #ffffff;
+
+  /* Neobrutalist ink: a solid stroke plus a hard offset shadow. */
+  --stroke: #14181f;
+  --ink: #14181f;
+}
+
+/* Dark is a first class alternate. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #0c0f14;
+  --surface: #151a23;
+  --foreground: #e7ebf0;
+  --muted: #98a2b3;
+  --border: #232b38;
+  --accent: #58a6ff;
+  --accent-foreground: #041227;
+
+  --stroke: #2b3543;
+  --ink: #000000;
 }
 
 @layer base {
@@ -80,6 +87,11 @@
   html {
     scroll-behavior: auto;
   }
+
+  /* Keep the press feedback, but apply it instantly. */
+  .brutal-press {
+    transition: none;
+  }
 }
 
 /* The blinking cursor used by the prompt motif. */
@@ -96,6 +108,45 @@
 
 .cursor-blink {
   animation: cursor-blink 1.1s step-end infinite;
+}
+
+/* Neobrutalist primitives: a solid stroke and a hard offset shadow. Used
+   sparingly on cards, badges, and buttons so the terminal calm stays intact. */
+.brutal {
+  border: 2px solid var(--stroke);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 0 var(--ink);
+}
+
+/* Pressable version for buttons: lifts on hover, sinks on click. */
+.brutal-press {
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.brutal-press:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 0 var(--ink);
+}
+
+.brutal-press:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 0 var(--ink);
+}
+
+/* Skill badge: a brand tinted fill, dark stroke, and a small offset shadow.
+   Each pill sets --brand inline so the tint follows the logo. */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 2px solid var(--stroke);
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 0 var(--ink);
+  background: color-mix(in srgb, var(--brand, var(--accent)) 15%, var(--surface));
+  padding: 0.3rem 0.55rem;
+  line-height: 1;
 }
 
 /* Command palette (cmdk is headless, so the shell is styled here). */
@@ -129,12 +180,18 @@
 @keyframes reveal {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(32px);
   }
+
   to {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
   }
+}
+
+[data-reveal] {
+  animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
 }
 
 @keyframes reveal-photo {
@@ -148,19 +205,25 @@
   }
 }
 
-[data-reveal] {
-  animation: reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: var(--reveal-delay, 0ms);
-}
-
 [data-reveal="photo"] {
   animation-name: reveal-photo;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  [data-reveal] {
-    animation: none;
-  }
+/* Scroll reveal. Items rise and fade in as they enter the viewport.
+   Only hidden when JS is on, so no-JS and crawlers still see the content. */
+.js .reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 /* Tech stack marquee */
