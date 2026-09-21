@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { projects, projectCategories, repoUrl, type ProjectCategory } from "@/lib/projects";
 import { cn } from "@/lib/cn";
 
@@ -66,7 +67,14 @@ export function ProjectsGrid() {
                 )}
               </div>
 
-              <h3 className="mt-2 text-lg font-semibold tracking-tight">{project.name}</h3>
+              <h3 className="mt-2 text-lg font-semibold tracking-tight">
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="hover:text-accent transition-colors"
+                >
+                  {project.name}
+                </Link>
+              </h3>
               <p className="text-muted mt-2 flex-1 text-sm leading-relaxed">
                 {t(`items.${project.slug}.description`)}
               </p>

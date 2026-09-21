@@ -38,7 +38,12 @@
     "intro": "Uma seleção do que construí, do full stack ao terminal e à infraestrutura.",
     "filterLabel": "Filtrar projetos",
     "viewCode": "Ver código",
+    "caseStudy": "Ver estudo de caso",
     "private": "Código privado",
+    "back": "Voltar aos projetos",
+    "overviewLabel": "o projeto",
+    "stackLabel": "stack",
+    "notFound": "Projeto não encontrado.",
     "filters": {
       "all": "Todos",
       "fullstack": "Full stack",
@@ -48,31 +53,40 @@
     },
     "items": {
       "bookshelf": {
-        "description": "Aplicação full stack para gerenciar a biblioteca pessoal e acompanhar hábitos de leitura, com busca via Google Books e recomendações com Gemini."
+        "description": "Aplicação full stack para gerenciar a biblioteca pessoal e acompanhar hábitos de leitura, com busca via Google Books e recomendações com Gemini.",
+        "overview": "O Bookshelf App é uma aplicação full stack para gerenciar uma biblioteca pessoal e acompanhar hábitos de leitura: cadastrar livros, registrar progresso, adicionar avaliações e anotações e ver estatísticas. Integrei a Google Books API para busca e o Google Gemini para recomendações personalizadas. Foi construído com Next.js, tRPC, Prisma e PostgreSQL, com Auth.js, Docker, GitHub Actions, testes em Vitest e deploy na Vercel, buscando práticas próximas de produção."
       },
       "algocards": {
-        "description": "Flashcards de algoritmos e estruturas de dados com repetição espaçada FSRS-6 para agendar revisões e preparar entrevistas técnicas."
+        "description": "Flashcards de algoritmos e estruturas de dados com repetição espaçada FSRS-6 para agendar revisões e preparar entrevistas técnicas.",
+        "overview": "O AlgoCards é uma plataforma de flashcards para estudar algoritmos e estruturas de dados, com foco em preparação para entrevistas. Usa repetição espaçada FSRS-6 para decidir quando revisar cada cartão, com suporte a código e cartões de complexidade. Implementei e testei o próprio módulo do FSRS com testes de propriedades e casos de referência, sobre Next.js, tRPC, Prisma e PostgreSQL."
       },
       "stockio": {
-        "description": "Backend de um marketplace com usuários, lojas, produtos e categorias, feito no processo trainee da CJR, com autenticação JWT e recuperação de senha."
+        "description": "Backend de um marketplace com usuários, lojas, produtos e categorias, feito no processo trainee da CJR, com autenticação JWT e recuperação de senha.",
+        "overview": "O Stock.io é o backend de um marketplace que construí no processo trainee da CJR, cobrindo usuários, lojas, produtos e categorias. Implementei autenticação com JWT e recuperação de senha por e-mail, praticando organização de APIs, ORM e variáveis de ambiente. Foi feito com NestJS, TypeScript, Prisma e PostgreSQL."
       },
       "homelab": {
-        "description": "Ambiente de desenvolvimento self-hosted em Fedora Linux, com serviços em Docker, reverse proxy, monitoramento e backups reproduzíveis."
+        "description": "Ambiente de desenvolvimento self-hosted em Fedora Linux, com serviços em Docker, reverse proxy, monitoramento e backups reproduzíveis.",
+        "overview": "O Dev Homelab é meu ambiente pessoal para estudar infraestrutura, Docker e DevOps. Transformei um MacBook Air em servidor com Fedora Linux, hospedando PostgreSQL, Redis, Traefik, Portainer, Prometheus, Grafana e Uptime Kuma. Pratiquei containerização, reverse proxy, TLS, redes Docker, monitoramento, backups e gerenciamento de secrets, com Docker Compose e scripts para deixar tudo reproduzível."
       },
       "piggyme": {
-        "description": "App de gestão financeira com receitas, despesas, metas e dashboards, feito em equipe para a disciplina de Métodos de Desenvolvimento na UnB."
+        "description": "App de gestão financeira com receitas, despesas, metas e dashboards, feito em equipe para a disciplina de Métodos de Desenvolvimento na UnB.",
+        "overview": "O PiggyMe é uma aplicação de gestão financeira feita em equipe (time Brooks) para a disciplina de Métodos de Desenvolvimento de Software da UnB. Permite controlar receitas e despesas, criar metas e acompanhar as finanças por dashboards e gráficos, com elementos de gamificação. Trabalhei com Node.js, Express, MySQL e JavaScript, além de JWT, bcrypt e Nodemailer."
       },
       "unitask": {
-        "description": "Gerenciador de tarefas full stack com autenticação, calendário e um gráfico de atividade semanal feito na Canvas API, sem bibliotecas externas."
+        "description": "Gerenciador de tarefas full stack com autenticação, calendário e um gráfico de atividade semanal feito na Canvas API, sem bibliotecas externas.",
+        "overview": "O UniTask é um gerenciador de tarefas full stack feito em dupla. Permite cadastrar e autenticar usuários, criar tarefas com datas, visualizá-las em um calendário e ver um gráfico de atividade semanal e um resumo do progresso. Usei JavaScript, Express, JWT, bcrypt e Supabase, e desenhei o gráfico direto na Canvas API, sem bibliotecas externas."
       },
       "budgetpro": {
-        "description": "Dashboard de finanças pessoais em JS puro: receitas, despesas, gráfico e conversão BRL/USD em tempo real pela Frankfurter API."
+        "description": "Dashboard de finanças pessoais em JS puro: receitas, despesas, gráfico e conversão BRL/USD em tempo real pela Frankfurter API.",
+        "overview": "O BudgetPro é um dashboard de finanças pessoais em HTML, CSS e JavaScript puro. Permite cadastrar e excluir receitas e despesas, acompanhar saldo e totais, filtrar e ordenar transações, ver um gráfico e converter BRL/USD em tempo real pela Frankfurter API. Consolidei fundamentos como Fetch API, async/await, manipulação do DOM, Chart.js, localStorage, exportação para CSV, CSS Grid e a metodologia BEM."
       },
       "atividadeDocker": {
-        "description": "Atividade da trilha de Docker da CJR: containerizar uma API de recados com PostgreSQL, imagens multi-stage, Compose e publicação no GHCR."
+        "description": "Atividade da trilha de Docker da CJR: containerizar uma API de recados com PostgreSQL, imagens multi-stage, Compose e publicação no GHCR.",
+        "overview": "A Atividade Docker faz parte da trilha de Docker da CJR e tem como objetivo containerizar uma aplicação na prática. Partindo de uma API simples de mural de recados, configurei um container PostgreSQL, a própria API e a comunicação entre os serviços. Pratiquei Dockerfiles, imagens multi-stage, Docker Compose, volumes, redes e variáveis de ambiente, além de publicar imagens no GHCR com GitHub Actions."
       },
       "learning": {
-        "description": "Registro dos meus estudos e exercícios ao longo do ano, de estruturas de dados e compiladores a TypeScript, NestJS e SQL."
+        "description": "Registro dos meus estudos e exercícios ao longo do ano, de estruturas de dados e compiladores a TypeScript, NestJS e SQL.",
+        "overview": "O Learning Journal 2026 é meu registro de estudos, exercícios e projetos ao longo do ano. Reúne conteúdos de estruturas de dados e algoritmos, TypeScript, NestJS, Oracle SQL, orientação a objetos e compiladores. A ideia é colocar em código os conceitos que estudo na graduação e explorar novas tecnologias, acompanhando minha evolução."
       }
     }
   },
