@@ -68,9 +68,11 @@ export default async function LocaleLayout({
           {themeScript}
         </Script>
         <NextIntlClientProvider messages={messages}>
-          <SiteHeader />
-          <div className="flex flex-1 flex-col">{children}</div>
-          <SiteFooter />
+          <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col border-x-2 border-[var(--stroke)]">
+            <SiteHeader />
+            <div className="flex flex-1 flex-col">{children}</div>
+            <SiteFooter />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

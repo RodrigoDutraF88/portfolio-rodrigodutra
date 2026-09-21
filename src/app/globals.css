@@ -90,8 +90,6 @@
 
   /* Keep the press and hover feedback, but apply them instantly. */
   .brutal-press,
-  .project-card,
-  .project-card__inner,
   .project-card__preview {
     transition: none;
   }
@@ -153,48 +151,26 @@
 }
 
 /* Project card: on hover or focus the card itself expands, growing a preview
-   image out of its own bottom edge. Card and preview share one stroke and one
-   drop-shadow, so it reads as a single card getting taller rather than a second
-   card appearing. The preview is absolute, so the growth overlaps the rows
-   below instead of reflowing the grid. */
+   image out of its own bottom edge as one continuous surface (one stroke, one
+   drop-shadow). The preview is part of the card's flow, so the card gets taller
+   and the rows below it move down in response, smoothly. */
 .project-card {
-  position: relative;
   filter: drop-shadow(5px 5px 0 var(--ink));
-  transition: transform 0.18s ease;
 }
 
 .project-card__inner {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   border: 2px solid var(--stroke);
   border-radius: 10px;
   background: var(--surface);
-  transition: border-radius 0.18s ease;
-}
-
-.project-card:hover,
-.project-card:focus-within {
-  z-index: 20;
-  transform: translateY(-3px);
-}
-
-/* Square the bottom so the card flows straight into the preview. */
-.project-card:hover .project-card__inner,
-.project-card:focus-within .project-card__inner {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
 }
 
 .project-card__preview {
-  position: absolute;
-  inset-inline: 0;
-  top: calc(100% - 2px);
   height: 0;
   overflow: hidden;
-  border: 2px solid var(--stroke);
-  border-top: none;
-  border-radius: 0 0 10px 10px;
-  background: var(--surface);
-  transition: height 0.2s ease;
-  pointer-events: none;
+  transition: height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-card:hover .project-card__preview,
@@ -204,7 +180,7 @@
 
 .project-card__img {
   display: block;
-  height: 100%;
+  height: 150px;
   width: 100%;
   object-fit: cover;
 }
