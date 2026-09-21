@@ -48,8 +48,8 @@ export function ProjectsGrid() {
         {shown.map((project) => {
           const url = repoUrl(project);
           return (
-            <li key={project.slug} className="project-card group relative">
-              <article className="project-card__inner brutal bg-surface flex h-full flex-col rounded-[10px] p-5">
+            <li key={project.slug} className="project-card group">
+              <article className="project-card__inner flex h-full flex-col p-5">
                 <div className="flex items-center justify-between gap-2 font-mono text-xs">
                   <span className="text-muted tracking-widest uppercase">
                     {t(`filters.${project.category}`)}
@@ -92,10 +92,10 @@ export function ProjectsGrid() {
                 </ul>
               </article>
 
-              {/* Revealed below the card on hover or focus. Decorative preview. */}
+              {/* Grown from the card's bottom edge on hover or focus. Decorative. */}
               <div className="project-card__preview" aria-hidden="true">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={project.image} alt="" loading="lazy" className="block w-full" />
+                <img src={project.image} alt="" loading="lazy" className="project-card__img" />
               </div>
             </li>
           );

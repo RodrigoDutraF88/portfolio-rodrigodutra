@@ -14,7 +14,7 @@
   "about": {
     "label": "chi sono",
     "lead": "Ciao! Mi chiamo Rodrigo Dutra.",
-    "body": "Ciao! Mi chiamo Rodrigo Dutra Ferreira, sono uno studente di Ingegneria del Software all'Università di Brasília (UnB), attualmente al quinto semestre, e faccio parte della CJR, l'impresa junior di informatica della UnB, dove lavoro su progetti reali per i clienti e imparo sul campo come funziona lo sviluppo in team.",
+    "body": "Sono uno studente di Ingegneria del Software all'Università di Brasília (UnB), attualmente al quinto semestre, e faccio parte della CJR, l'impresa junior di informatica della UnB, dove lavoro su progetti reali per i clienti e imparo sul campo come funziona lo sviluppo in team.",
     "body2": "Sono appassionato di tecnologia e apprendimento continuo, credo che migliorare un po' ogni giorno sia il segreto per diventare un buon professionista. Il mio focus principale è l'ecosistema Node.js e TypeScript, e ho già realizzato diversi progetti full-stack dall'inizio alla fine, dal modello dati in PostgreSQL al deploy containerizzato con Docker e CI/CD su GitHub Actions. Ho anche esperienza con metodi agili (Scrum e XP), documentazione tecnica e lavoro in team multidisciplinare, oltre a mantenere un homelab dove applico concetti di infrastruttura e cloud. Oltre ai linguaggi di programmazione, parlo inglese e italiano fluentemente.",
     "location": "Brasília, Brasile"
   },

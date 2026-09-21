@@ -26,7 +26,7 @@ export const projects: Project[] = [
     repo: "bookshelf-app",
     category: "fullstack",
     tags: ["Next.js", "tRPC", "Prisma", "PostgreSQL", "Docker"],
-    image: "/projects/bookshelf.svg",
+    image: "/projects/bookshelf.png",
   },
   {
     slug: "algocards",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     repo: "AlgoCards",
     category: "fullstack",
     tags: ["Next.js", "tRPC", "Prisma", "FSRS"],
-    image: "/projects/algocards.svg",
+    image: "/projects/algocards.png",
   },
   {
     slug: "stockio",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     repo: "GiovanniMateus/ValeteDeCopas_PT_CJR_Backend",
     category: "backend",
     tags: ["NestJS", "Prisma", "PostgreSQL", "JWT"],
-    image: "/projects/stockio.svg",
+    image: "/projects/stockio.png",
   },
   {
     slug: "homelab",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     repo: "dev-homelab",
     category: "systems",
     tags: ["Fedora", "Docker", "Traefik", "Grafana"],
-    image: "/projects/homelab.svg",
+    image: "/projects/homelab.png",
   },
   {
     slug: "piggyme",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     repo: "FGA0138-MDS-Ajax/2026.1-T03-Brooks",
     category: "fullstack",
     tags: ["Node.js", "Express", "MySQL", "JWT"],
-    image: "/projects/piggyme.svg",
+    image: "/projects/piggyme.jpg",
   },
   {
     slug: "unitask",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     repo: "Projeto-UniTask",
     category: "fullstack",
     tags: ["JavaScript", "Express", "Supabase", "Canvas API"],
-    image: "/projects/unitask.svg",
+    image: "/projects/unitask.png",
   },
   {
     slug: "budgetpro",
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     repo: "BudgetPro",
     category: "fullstack",
     tags: ["JavaScript", "Chart.js", "LocalStorage", "Fetch API"],
-    image: "/projects/budgetpro.svg",
+    image: "/projects/budgetpro.png",
   },
   {
     slug: "atividadeDocker",
