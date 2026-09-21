@@ -4,19 +4,17 @@ import { externalLinks, site } from "@/lib/site";
 import { AsciiField } from "@/components/ascii-field";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { Skills } from "@/components/skills";
+import { ProjectsGrid } from "@/components/projects-grid";
 import { Reveal } from "@/components/reveal";
 
 const revealStyle = (ms: number) => ({ "--reveal-delay": `${ms}ms` }) as React.CSSProperties;
-
-// Language neutral: the id drives the translated role, org, and body.
-const experience = ["unb", "cjr"] as const;
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("hero");
   const tAbout = await getTranslations("about");
-  const tExp = await getTranslations("experience");
+  const tProjects = await getTranslations("projects");
 
   return (
     <>
@@ -55,16 +53,16 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             Rodrigo Dutra
             <span className="cursor-blink text-accent ml-1 inline-block">▋</span>
           </h1>
-          <p data-reveal style={revealStyle(750)} className="mt-3 text-lg">
+          <p data-reveal style={revealStyle(1150)} className="mt-3 text-lg">
             {t("role")}
           </p>
-          <p data-reveal style={revealStyle(930)} className="text-muted mt-3 max-w-xl text-base">
+          <p data-reveal style={revealStyle(1230)} className="text-muted mt-3 max-w-xl text-base">
             {t("tagline")}
           </p>
 
           <div
             data-reveal
-            style={revealStyle(1210)}
+            style={revealStyle(1510)}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
             <a
@@ -83,7 +81,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
           <div
             data-reveal
-            style={revealStyle(1590)}
+            style={revealStyle(1890)}
             className="text-muted mt-8 flex flex-wrap gap-4 font-mono text-xs"
           >
             {externalLinks.map((link) => (
@@ -141,38 +139,22 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      <Skills />
-
-      <section id="experience" className="border-t border-[var(--border)] py-14">
+      <section id="projects" className="border-t border-[var(--border)] py-14">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">
           <Reveal>
             <p className="text-muted font-mono text-xs tracking-widest uppercase">
               <span className="text-accent">{"// "}</span>
-              {tExp("label")}
+              {tProjects("label")}
             </p>
+            <p className="text-muted mt-2 max-w-md text-sm">{tProjects("intro")}</p>
           </Reveal>
-          <div className="mt-6 space-y-4">
-            {experience.map((id, index) => (
-              <Reveal key={id} delay={index * 90}>
-                <article className="brutal bg-surface p-5">
-                  <div className="flex items-baseline justify-between gap-3">
-                    <h3 className="text-base font-semibold tracking-tight">
-                      {tExp(`items.${id}.role`)}
-                    </h3>
-                    <span className="text-muted shrink-0 font-mono text-xs">
-                      {tExp(`items.${id}.when`)}
-                    </span>
-                  </div>
-                  <p className="text-accent mt-0.5 font-mono text-xs">{tExp(`items.${id}.org`)}</p>
-                  <p className="text-muted mt-2 text-sm leading-relaxed">
-                    {tExp(`items.${id}.body`)}
-                  </p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={80}>
+            <ProjectsGrid />
+          </Reveal>
         </div>
       </section>
+
+      <Skills />
     </>
   );
 }

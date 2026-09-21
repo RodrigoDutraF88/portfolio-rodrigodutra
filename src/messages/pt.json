@@ -14,8 +14,8 @@
   "about": {
     "label": "sobre",
     "lead": "Oi, eu sou o Rodrigo.",
-    "body": "Sou desenvolvedor full stack e estudante de Engenharia de Software na UnB. Gosto de construir do começo ao fim, do banco de dados à interface, e de entender o que roda por baixo: sistemas, Linux e a linha de comando.",
-    "body2": "Fora do código, quase sempre estou testando uma ferramenta nova, mexendo no meu homelab ou lendo sobre compiladores. É mais ou menos isso.",
+    "body": "Sou estudante de Engenharia de Software na UnB, no quinto semestre, e membro da CJR, a empresa júnior de computação, onde trabalho em projetos reais em equipe. Meu foco é o ecossistema Node.js e TypeScript, e já entreguei vários projetos full stack de ponta a ponta, do modelo de dados em PostgreSQL ao deploy com Docker e CI/CD.",
+    "body2": "Também gosto de metodologias ágeis, documentação e de manter um homelab onde pratico infraestrutura e cloud. Fora do código, falo inglês e italiano fluentes.",
     "location": "Brasília, Brasil"
   },
   "skills": {
@@ -33,20 +33,46 @@
       "systems": "Onde o código roda: Linux, contêineres e controle de versão."
     }
   },
-  "experience": {
-    "label": "experiência",
+  "projects": {
+    "label": "projetos",
+    "intro": "Uma seleção do que construí, do full stack ao terminal e à infraestrutura.",
+    "filterLabel": "Filtrar projetos",
+    "viewCode": "Ver código",
+    "private": "Código privado",
+    "filters": {
+      "all": "Todos",
+      "fullstack": "Full stack",
+      "backend": "Backend",
+      "systems": "Sistemas",
+      "learning": "Estudos"
+    },
     "items": {
-      "unb": {
-        "role": "Engenharia de Software",
-        "org": "Universidade de Brasília",
-        "when": "Em curso",
-        "body": "Curso Engenharia de Software na UnB, com foco em estruturas de dados, compiladores e sistemas."
+      "bookshelf": {
+        "description": "Aplicação full stack para gerenciar a biblioteca pessoal e acompanhar hábitos de leitura, com busca via Google Books e recomendações com Gemini."
       },
-      "cjr": {
-        "role": "Backend · ValeteDeCopas",
-        "org": "CJR · Empresa Júnior",
-        "when": "Processo seletivo",
-        "body": "Construí o backend de um marketplace no processo seletivo da CJR, cobrindo autenticação, anúncios e pedidos."
+      "algocards": {
+        "description": "Flashcards de algoritmos e estruturas de dados com repetição espaçada FSRS-6 para agendar revisões e preparar entrevistas técnicas."
+      },
+      "stockio": {
+        "description": "Backend de um marketplace com usuários, lojas, produtos e categorias, feito no processo trainee da CJR, com autenticação JWT e recuperação de senha."
+      },
+      "homelab": {
+        "description": "Ambiente de desenvolvimento self-hosted em Fedora Linux, com serviços em Docker, reverse proxy, monitoramento e backups reproduzíveis."
+      },
+      "piggyme": {
+        "description": "App de gestão financeira com receitas, despesas, metas e dashboards, feito em equipe para a disciplina de Métodos de Desenvolvimento na UnB."
+      },
+      "unitask": {
+        "description": "Gerenciador de tarefas full stack com autenticação, calendário e um gráfico de atividade semanal feito na Canvas API, sem bibliotecas externas."
+      },
+      "budgetpro": {
+        "description": "Dashboard de finanças pessoais em JS puro: receitas, despesas, gráfico e conversão BRL/USD em tempo real pela Frankfurter API."
+      },
+      "atividadeDocker": {
+        "description": "Atividade da trilha de Docker da CJR: containerizar uma API de recados com PostgreSQL, imagens multi-stage, Compose e publicação no GHCR."
+      },
+      "learning": {
+        "description": "Registro dos meus estudos e exercícios ao longo do ano, de estruturas de dados e compiladores a TypeScript, NestJS e SQL."
       }
     }
   },

@@ -14,8 +14,8 @@
   "about": {
     "label": "chi sono",
     "lead": "Ciao, sono Rodrigo.",
-    "body": "Sono uno sviluppatore full stack e studente di Ingegneria del Software alla UnB. Mi piace costruire dall'inizio alla fine, dal database all'interfaccia, e capire cosa gira sotto: sistemi, Linux e la riga di comando.",
-    "body2": "Lontano dal codice, di solito provo un nuovo strumento, smanetto sul mio homelab o leggo di compilatori. Più o meno sono questo.",
+    "body": "Sono uno studente di Ingegneria del Software alla UnB, al quinto semestre, e membro della CJR, l'impresa junior di informatica dell'università, dove lavoro su progetti reali in team. Il mio focus è l'ecosistema Node.js e TypeScript, e ho realizzato diversi progetti full stack dall'inizio alla fine, dal modello dati in PostgreSQL al deploy con Docker e CI/CD.",
+    "body2": "Mi piacciono anche i metodi agili, la documentazione e tenere un homelab dove pratico infrastruttura e cloud. Fuori dal codice, parlo inglese e italiano fluentemente.",
     "location": "Brasília, Brasile"
   },
   "skills": {
@@ -33,20 +33,46 @@
       "systems": "Dove gira il codice: Linux, container e controllo di versione."
     }
   },
-  "experience": {
-    "label": "esperienza",
+  "projects": {
+    "label": "progetti",
+    "intro": "Una selezione di ciò che ho costruito, dal full stack al terminale e all'infrastruttura.",
+    "filterLabel": "Filtra i progetti",
+    "viewCode": "Vedi il codice",
+    "private": "Codice privato",
+    "filters": {
+      "all": "Tutti",
+      "fullstack": "Full stack",
+      "backend": "Backend",
+      "systems": "Sistemi",
+      "learning": "Studio"
+    },
     "items": {
-      "unb": {
-        "role": "Ingegneria del Software",
-        "org": "Università di Brasília",
-        "when": "In corso",
-        "body": "Studio Ingegneria del Software alla UnB, con focus su strutture dati, compilatori e sistemi."
+      "bookshelf": {
+        "description": "App full stack per gestire la libreria personale e monitorare le abitudini di lettura, con ricerca via Google Books e consigli con Gemini."
       },
-      "cjr": {
-        "role": "Backend · ValeteDeCopas",
-        "org": "CJR · Impresa Junior",
-        "when": "Processo di selezione",
-        "body": "Ho costruito il backend di un marketplace per il processo di selezione della CJR, con autenticazione, annunci e ordini."
+      "algocards": {
+        "description": "Flashcard di algoritmi e strutture dati con ripetizione dilazionata FSRS-6 per programmare i ripassi e preparare i colloqui tecnici."
+      },
+      "stockio": {
+        "description": "Backend di un marketplace con utenti, negozi, prodotti e categorie, realizzato nel processo trainee della CJR, con autenticazione JWT e recupero password."
+      },
+      "homelab": {
+        "description": "Ambiente di sviluppo self-hosted su Fedora Linux, con servizi in Docker, reverse proxy, monitoraggio e backup riproducibili."
+      },
+      "piggyme": {
+        "description": "App di gestione finanziaria con entrate, spese, obiettivi e dashboard, realizzata in team per il corso di Metodi di Sviluppo alla UnB."
+      },
+      "unitask": {
+        "description": "Task manager full stack con autenticazione, calendario e un grafico di attività settimanale disegnato con la Canvas API, senza librerie esterne."
+      },
+      "budgetpro": {
+        "description": "Dashboard di finanze personali in JS puro: entrate, spese, un grafico e conversione BRL/USD in tempo reale con la Frankfurter API."
+      },
+      "atividadeDocker": {
+        "description": "Esercizio del percorso Docker della CJR: containerizzare una API di messaggi con PostgreSQL, immagini multi-stage, Compose e pubblicazione su GHCR."
+      },
+      "learning": {
+        "description": "Un diario dei miei studi ed esercizi durante l'anno, dalle strutture dati e i compilatori a TypeScript, NestJS e SQL."
       }
     }
   },

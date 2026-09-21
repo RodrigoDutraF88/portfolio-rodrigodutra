@@ -12,8 +12,8 @@ Status key: `todo`, `draft`, `done`.
 | Hero           | Photo, name, role, one line pitch        | todo  | todo  | todo  |
 | About          | Who I am, full stack and systems story   | draft | draft | draft |
 | Skills         | Grouped tools and languages with context | draft | draft | draft |
-| Experience     | UnB and CJR timeline                     | draft | draft | draft |
-| Projects list  | Filterable cards                         | todo  | todo  | todo  |
+| Experience     | UnB and CJR timeline (folded into About) | todo  | todo  | todo  |
+| Projects list  | Filterable cards                         | draft | draft | draft |
 | Project detail | Case studies per project                 | todo  | todo  | todo  |
 | Systems        | Homelab, Linux, C and compilers          | todo  | todo  | todo  |
 | GitHub         | Live activity and pinned repos           | todo  | todo  | todo  |

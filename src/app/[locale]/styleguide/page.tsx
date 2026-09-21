@@ -107,8 +107,8 @@ export default async function StyleGuide({ params }: { params: Promise<{ locale:
         <div className="brutal bg-surface p-5">
           <h3 className="text-base font-semibold tracking-tight">Solid stroke, hard shadow</h3>
           <p className="text-muted mt-1 text-sm">
-            A raised surface with a solid stroke and an offset shadow. Used for the about, skills,
-            and experience cards.
+            A raised surface with a solid stroke and an offset shadow. Used for the about, project,
+            and skills cards.
           </p>
           <div className="mt-4 flex flex-wrap gap-2 font-mono text-xs">
             <span className="pill" style={{ "--brand": "var(--accent)" } as React.CSSProperties}>
