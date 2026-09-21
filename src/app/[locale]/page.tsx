@@ -26,7 +26,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <AsciiField className="size-full opacity-60" />
         </div>
 
-        <div className="mx-auto w-full max-w-2xl px-4 py-16 sm:px-6">
+        <div className="mx-auto w-full max-w-2xl px-4 py-16 text-center sm:px-6">
           <div
             data-reveal="photo"
             style={revealStyle(0)}
@@ -56,14 +56,18 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <p data-reveal style={revealStyle(1150)} className="mt-3 text-lg">
             {t("role")}
           </p>
-          <p data-reveal style={revealStyle(1230)} className="text-muted mt-3 max-w-xl text-base">
+          <p
+            data-reveal
+            style={revealStyle(1230)}
+            className="text-muted mx-auto mt-3 max-w-xl text-base"
+          >
             {t("tagline")}
           </p>
 
           <div
             data-reveal
             style={revealStyle(1510)}
-            className="mt-8 flex flex-wrap items-center gap-3"
+            className="mt-8 flex flex-wrap items-center justify-center gap-3"
           >
             <a
               href="#projects"
@@ -82,7 +86,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <div
             data-reveal
             style={revealStyle(1890)}
-            className="text-muted mt-8 flex flex-wrap gap-4 font-mono text-xs"
+            className="text-muted mt-8 flex flex-wrap justify-center gap-4 font-mono text-xs"
           >
             {externalLinks.map((link) => (
               <a

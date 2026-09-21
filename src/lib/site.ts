@@ -8,9 +8,12 @@ export const site = {
 } as const;
 
 // Stable, language neutral section ids. Nav labels are translated separately.
-export const sections = ["about", "projects", "systems", "contact"] as const;
+export const sections = ["about", "projects", "contact"] as const;
 
 export type SectionId = (typeof sections)[number];
+
+// Downloadable resume, served from /public. Swap in the real file per language later.
+export const resumeHref = "/cv.pdf";
 
 export const externalLinks = [
   { label: "GitHub", href: site.github },

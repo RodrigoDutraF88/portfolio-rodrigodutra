@@ -2,8 +2,8 @@
   "nav": {
     "about": "About",
     "projects": "Projects",
-    "systems": "Systems",
-    "contact": "Contact"
+    "contact": "Contact",
+    "resume": "CV"
   },
   "hero": {
     "role": "Software engineer and student at UnB",
@@ -13,9 +13,9 @@
   },
   "about": {
     "label": "about",
-    "lead": "Hi, I'm Rodrigo.",
-    "body": "I'm a Software Engineering student at UnB, in my fifth semester, and a member of CJR, the university's computing junior enterprise, where I work on real projects as a team. My focus is the Node.js and TypeScript ecosystem, and I've shipped several full stack projects end to end, from the PostgreSQL data model to deployment with Docker and CI/CD.",
-    "body2": "I also enjoy agile methods, documentation, and keeping a homelab where I practice infrastructure and cloud. Away from code, I speak English and Italian fluently.",
+    "lead": "Hi! My name is Rodrigo Dutra.",
+    "body": "Hi! My name is Rodrigo Dutra Ferreira. I'm a Software Engineering student at the University of Brasília (UnB), currently in my fifth semester, and part of CJR, UnB's computing junior enterprise, where I work on real projects for clients and learn firsthand how team development works.",
+    "body2": "I'm passionate about technology and continuous learning; I believe getting a little better every day is the secret to becoming a good professional. My main focus is the Node.js and TypeScript ecosystem, and I've delivered several full-stack projects from start to finish, from the PostgreSQL data model to containerized deployment with Docker and CI/CD on GitHub Actions. I also have experience with agile methods (Scrum and XP), technical documentation, and multidisciplinary teamwork, plus I keep a homelab where I apply infrastructure and cloud concepts. Besides programming languages, I speak English and Italian fluently.",
     "location": "Brasília, Brazil"
   },
   "skills": {

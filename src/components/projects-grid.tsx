@@ -48,47 +48,55 @@ export function ProjectsGrid() {
         {shown.map((project) => {
           const url = repoUrl(project);
           return (
-            <li key={project.slug} className="brutal bg-surface flex flex-col rounded-[10px] p-5">
-              <div className="flex items-center justify-between gap-2 font-mono text-xs">
-                <span className="text-muted tracking-widest uppercase">
-                  {t(`filters.${project.category}`)}
-                </span>
-                {url ? (
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent hover:text-foreground transition-colors"
+            <li key={project.slug} className="project-card group relative">
+              <article className="project-card__inner brutal bg-surface flex h-full flex-col rounded-[10px] p-5">
+                <div className="flex items-center justify-between gap-2 font-mono text-xs">
+                  <span className="text-muted tracking-widest uppercase">
+                    {t(`filters.${project.category}`)}
+                  </span>
+                  {url ? (
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-foreground transition-colors"
+                    >
+                      {t("viewCode")} ↗
+                    </a>
+                  ) : (
+                    <span className="text-muted">{t("private")}</span>
+                  )}
+                </div>
+
+                <h3 className="mt-2 text-lg font-semibold tracking-tight">
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="hover:text-accent transition-colors"
                   >
-                    {t("viewCode")} ↗
-                  </a>
-                ) : (
-                  <span className="text-muted">{t("private")}</span>
-                )}
+                    {project.name}
+                  </Link>
+                </h3>
+                <p className="text-muted mt-2 flex-1 text-sm leading-relaxed">
+                  {t(`items.${project.slug}.description`)}
+                </p>
+
+                <ul className="mt-4 flex flex-wrap gap-1.5">
+                  {project.tags.map((tag) => (
+                    <li
+                      key={tag}
+                      className="text-muted rounded border border-[var(--border)] px-1.5 py-0.5 font-mono text-[11px]"
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+
+              {/* Revealed below the card on hover or focus. Decorative preview. */}
+              <div className="project-card__preview" aria-hidden="true">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={project.image} alt="" loading="lazy" className="block w-full" />
               </div>
-
-              <h3 className="mt-2 text-lg font-semibold tracking-tight">
-                <Link
-                  href={`/projects/${project.slug}`}
-                  className="hover:text-accent transition-colors"
-                >
-                  {project.name}
-                </Link>
-              </h3>
-              <p className="text-muted mt-2 flex-1 text-sm leading-relaxed">
-                {t(`items.${project.slug}.description`)}
-              </p>
-
-              <ul className="mt-4 flex flex-wrap gap-1.5">
-                {project.tags.map((tag) => (
-                  <li
-                    key={tag}
-                    className="text-muted rounded border border-[var(--border)] px-1.5 py-0.5 font-mono text-[11px]"
-                  >
-                    {tag}
-                  </li>
-                ))}
-              </ul>
             </li>
           );
         })}

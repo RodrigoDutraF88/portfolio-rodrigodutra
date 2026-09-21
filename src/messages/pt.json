@@ -2,8 +2,8 @@
   "nav": {
     "about": "Sobre",
     "projects": "Projetos",
-    "systems": "Sistemas",
-    "contact": "Contato"
+    "contact": "Contato",
+    "resume": "CV"
   },
   "hero": {
     "role": "Desenvolvedor Full-stack e Estudante de Engenharia de Software na UnB",
@@ -13,9 +13,9 @@
   },
   "about": {
     "label": "sobre",
-    "lead": "Oi, eu sou o Rodrigo.",
-    "body": "Sou estudante de Engenharia de Software na UnB, no quinto semestre, e membro da CJR, a empresa júnior de computação, onde trabalho em projetos reais em equipe. Meu foco é o ecossistema Node.js e TypeScript, e já entreguei vários projetos full stack de ponta a ponta, do modelo de dados em PostgreSQL ao deploy com Docker e CI/CD.",
-    "body2": "Também gosto de metodologias ágeis, documentação e de manter um homelab onde pratico infraestrutura e cloud. Fora do código, falo inglês e italiano fluentes.",
+    "lead": "Olá! Meu nome é Rodrigo Dutra.",
+    "body": "Olá! Meu nome é Rodrigo Dutra Ferreira, sou estudante de Engenharia de Software na Universidade de Brasília (UnB), atualmente no quinto semestre, e faço parte da CJR, empresa júnior de computação da UnB, onde trabalho em projetos reais para clientes e aprendo na prática como funciona o desenvolvimento em equipe.",
+    "body2": "Sou apaixonado por tecnologia e aprendizado continuo, creio que melhorar um pouco cada dia é o segredo para se tornar um bom profissional. Meu foco principal é o ecossistema Node.js e TypeScript, e já entreguei diversos projetos full-stack do início ao fim, do modelo de dados em PostgreSQL até deploy containerizado com Docker e CI/CD no GitHub Actions. Também tenho experiência com metodologias ágeis (Scrum e XP), documentação técnica e trabalho em equipe multidisciplinar, além de manter um homelab onde aplico conceitos de infraestrutura e cloud. Além das linguagens de programação falo inglês e italiano fluentes.",
     "location": "Brasília, Brasil"
   },
   "skills": {

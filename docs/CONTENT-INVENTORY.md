@@ -35,8 +35,8 @@ Pulled from real repositories. Descriptions are drafted in [ROADMAP.md](ROADMAP.
 ## Assets to gather
 
 - Profile photo or avatar
-- Resume PDF in each language
-- Project screenshots or short clips
+- Resume PDF in each language (placeholder at `public/cv.pdf`, replace with the real CV)
+- Project screenshots or short clips (placeholders at `public/projects/*.svg`, revealed on card hover)
 - Favicon and Open Graph image set
 
 ## Rules

@@ -88,8 +88,10 @@
     scroll-behavior: auto;
   }
 
-  /* Keep the press feedback, but apply it instantly. */
-  .brutal-press {
+  /* Keep the press and hover feedback, but apply them instantly. */
+  .brutal-press,
+  .project-card__inner,
+  .project-card__preview {
     transition: none;
   }
 }
@@ -147,6 +149,52 @@
   background: color-mix(in srgb, var(--brand, var(--accent)) 15%, var(--surface));
   padding: 0.3rem 0.55rem;
   line-height: 1;
+}
+
+/* Project card: on hover or focus it lifts and pops over the content, revealing
+   a preview image attached below. The preview is absolute, so it overlaps the
+   rows beneath instead of reflowing the grid. */
+.project-card__inner {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  z-index: 20;
+}
+
+.project-card:hover .project-card__inner,
+.project-card:focus-within .project-card__inner {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 0 var(--ink);
+}
+
+.project-card__preview {
+  position: absolute;
+  inset-inline: 0;
+  top: calc(100% - 2px);
+  z-index: 20;
+  overflow: hidden;
+  border: 2px solid var(--stroke);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 8px 8px 0 0 var(--ink);
+  background: var(--surface);
+  opacity: 0;
+  transform: translateY(-8px);
+  transform-origin: top center;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-card__preview,
+.project-card:focus-within .project-card__preview {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Command palette (cmdk is headless, so the shell is styled here). */

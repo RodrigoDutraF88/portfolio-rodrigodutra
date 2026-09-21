@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { CommandMenu } from "./command-menu";
 import { LocaleSwitcher } from "./locale-switcher";
 import { ThemeToggle } from "./theme-toggle";
-import { sections } from "@/lib/site";
+import { resumeHref, sections } from "@/lib/site";
 
 export async function SiteHeader() {
   const t = await getTranslations("nav");
@@ -20,6 +20,9 @@ export async function SiteHeader() {
               {t(id)}
             </a>
           ))}
+          <a href={resumeHref} download className="hover:text-foreground transition-colors">
+            {t("resume")}
+          </a>
         </nav>
 
         <div className="flex items-center gap-2">
