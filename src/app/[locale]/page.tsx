@@ -76,7 +76,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               {t("viewProjects")}
             </a>
             <a
-              href="#contact"
+              href="https://linktr.ee/rodrigodutra_"
               className="bg-surface brutal brutal-press rounded-lg px-4 py-2 text-sm font-medium"
             >
               {t("getInTouch")}
