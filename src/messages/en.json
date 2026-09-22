@@ -33,6 +33,27 @@
       "systems": "Where the code runs: Linux, containers, and version control."
     }
   },
+  "systems": {
+    "label": "systems",
+    "intro": "From the browser to the server: where the code runs and how it's built.",
+    "cards": {
+      "homelab": {
+        "title": "Homelab",
+        "body": "I run my self-hosted development environment on Fedora Linux, with services in Docker, a reverse proxy, monitoring, and reproducible backups."
+      },
+      "lowlevel": {
+        "title": "Low level",
+        "body": "At UnB I work close to the metal: data structures in C and lexical and syntax analysis in compilers."
+      }
+    },
+    "github": {
+      "label": "github",
+      "repos": "repositories",
+      "stars": "stars",
+      "profile": "View on GitHub",
+      "unavailable": "Couldn't load GitHub data right now."
+    }
+  },
   "projects": {
     "label": "projects",
     "intro": "A selection of what I've built, from full stack to the terminal and infrastructure.",

@@ -33,6 +33,27 @@
       "systems": "Onde o código roda: Linux, contêineres e controle de versão."
     }
   },
+  "systems": {
+    "label": "sistemas",
+    "intro": "Do navegador ao servidor: onde o código roda e como ele é construído.",
+    "cards": {
+      "homelab": {
+        "title": "Homelab",
+        "body": "Rodo meu ambiente de desenvolvimento self-hosted em Fedora Linux, com serviços em Docker, reverse proxy, monitoramento e backups reproduzíveis."
+      },
+      "lowlevel": {
+        "title": "Baixo nível",
+        "body": "Na UnB, trabalho perto do metal: estruturas de dados em C e análise léxica e sintática em compiladores."
+      }
+    },
+    "github": {
+      "label": "github",
+      "repos": "repositórios",
+      "stars": "estrelas",
+      "profile": "Ver no GitHub",
+      "unavailable": "Não foi possível carregar os dados do GitHub agora."
+    }
+  },
   "projects": {
     "label": "projetos",
     "intro": "Uma seleção do que construí, do full stack ao terminal e à infraestrutura.",

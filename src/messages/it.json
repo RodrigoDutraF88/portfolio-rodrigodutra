@@ -33,6 +33,27 @@
       "systems": "Dove gira il codice: Linux, container e controllo di versione."
     }
   },
+  "systems": {
+    "label": "sistemi",
+    "intro": "Dal browser al server: dove gira il codice e come viene costruito.",
+    "cards": {
+      "homelab": {
+        "title": "Homelab",
+        "body": "Gestisco il mio ambiente di sviluppo self-hosted su Fedora Linux, con servizi in Docker, reverse proxy, monitoraggio e backup riproducibili."
+      },
+      "lowlevel": {
+        "title": "Basso livello",
+        "body": "Alla UnB lavoro vicino al metallo: strutture dati in C e analisi lessicale e sintattica nei compilatori."
+      }
+    },
+    "github": {
+      "label": "github",
+      "repos": "repository",
+      "stars": "stelle",
+      "profile": "Vedi su GitHub",
+      "unavailable": "Non è stato possibile caricare i dati di GitHub in questo momento."
+    }
+  },
   "projects": {
     "label": "progetti",
     "intro": "Una selezione di ciò che ho costruito, dal full stack al terminale e all'infrastruttura.",
