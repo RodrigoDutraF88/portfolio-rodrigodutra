@@ -150,7 +150,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               <span className="text-accent">{"// "}</span>
               {tProjects("label")}
             </p>
-            <p className="text-muted mt-2 max-w-md text-sm">{tProjects("intro")}</p>
+            <br />
           </Reveal>
           <Reveal delay={80}>
             <ProjectsGrid />
