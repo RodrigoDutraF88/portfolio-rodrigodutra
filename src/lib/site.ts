@@ -5,7 +5,15 @@ export const site = {
   github: "https://github.com/RodrigoDutraF88",
   linkedin: "https://www.linkedin.com/in/rodrigodutra8",
   leetcode: "https://leetcode.com/u/Rodrigo88/",
+  linktree: "https://linktr.ee/rodrigodutra_",
 } as const;
+
+// Canonical production origin, used for metadata, sitemap, and Open Graph.
+// Override with NEXT_PUBLIC_SITE_URL once the real domain is live.
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://rodrigodutra.dev").replace(
+  /\/$/,
+  "",
+);
 
 // Stable, language neutral section ids. Nav labels are translated separately.
 export const sections = ["about", "projects", "contact"] as const;

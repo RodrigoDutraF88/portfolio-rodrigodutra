@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { site, siteUrl } from "@/lib/site";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -19,10 +20,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Rodrigo Dutra",
-  description: "Engenheiro de software e estudante na UnB. Full stack e sistemas.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  const path = `/${locale}`;
+  const languages: Record<string, string> = Object.fromEntries(
+    routing.locales.map((l) => [l, `/${l}`]),
+  );
+
+  return {
+    metadataBase: new URL(siteUrl),
+    title: { default: t("title"), template: `%s · ${site.name}` },
+    description: t("description"),
+    alternates: {
+      canonical: path,
+      languages: { ...languages, "x-default": `/${routing.defaultLocale}` },
+    },
+    openGraph: {
+      type: "website",
+      locale,
+      url: path,
+      siteName: site.name,
+      title: t("title"),
+      description: t("description"),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+    },
+  };
+}
 
 // Applies the saved theme before paint so there is no flash. Light is the
 // default; a saved choice always wins.
@@ -67,6 +99,21 @@ export default async function LocaleLayout({
         <Script id="theme-init" strategy="beforeInteractive">
           {themeScript}
         </Script>
+        <script
+          type="application/ld+json"
+          // JSON-LD is trusted, generated from our own data.
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: site.name,
+              url: siteUrl,
+              jobTitle: "Software Engineer",
+              alumniOf: "Universidade de Brasília",
+              sameAs: [site.github, site.linkedin, site.leetcode, site.linktree],
+            }),
+          }}
+        />
         <NextIntlClientProvider messages={messages}>
           <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col border-x-2 border-[var(--stroke)]">
             <SiteHeader />

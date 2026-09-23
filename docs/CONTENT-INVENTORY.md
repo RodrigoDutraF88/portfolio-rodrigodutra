@@ -17,7 +17,7 @@ Status key: `todo`, `draft`, `done`.
 | Project detail | Case studies per project                 | draft | draft | draft |
 | Systems        | Homelab, Linux, C and compilers          | draft | draft | draft |
 | GitHub         | Live activity and pinned repos           | draft | draft | draft |
-| Contact        | Links, email, resume                     | todo  | todo  | todo  |
+| Contact        | Links, email, resume                     | draft | draft | draft |
 | Footer         | Small print and secondary links          | todo  | todo  | todo  |
 
 ## Projects to feature

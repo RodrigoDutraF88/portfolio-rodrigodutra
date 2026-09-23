@@ -123,6 +123,17 @@
     "styleGuide": "Guia de estilo",
     "toggleTheme": "Alternar tema"
   },
+  "meta": {
+    "title": "Rodrigo Dutra — Desenvolvedor Full-stack",
+    "description": "Desenvolvedor full stack e estudante de Engenharia de Software na UnB. Construo do banco de dados à interface, com foco em Node.js, TypeScript e sistemas."
+  },
+  "contact": {
+    "label": "contato",
+    "title": "Vamos construir algo?",
+    "body": "Estou aberto a novas oportunidades, colaborações e boas conversas. Me encontre por aqui.",
+    "resume": "Baixar CV",
+    "linktree": "Todos os links"
+  },
   "footer": {
     "builtWith": "Feito com Next.js.",
     "backToTop": "Voltar ao topo"
