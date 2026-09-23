@@ -18,6 +18,8 @@ const filters: Filter[] = ["all", ...projectCategories];
 export function ProjectsGrid() {
   const t = useTranslations("projects");
   const [filter, setFilter] = useState<Filter>("all");
+  // Which card's preview is open. Clicking a card toggles it; only one at a time.
+  const [openSlug, setOpenSlug] = useState<string | null>(null);
 
   const shown =
     filter === "all"
@@ -32,10 +34,25 @@ export function ProjectsGrid() {
 
   const renderProject = (project: (typeof projects)[number]) => {
     const url = repoUrl(project);
+    const isOpen = openSlug === project.slug;
+    const toggle = () => setOpenSlug((current) => (current === project.slug ? null : project.slug));
 
     return (
-      <li key={project.slug} className="project-card group">
-        <article className="project-card__inner brutal bg-surface overflow-hidden">
+      <li key={project.slug} className="project-card">
+        {/* Click the card to reveal the preview. Links inside stop propagation. */}
+        <article
+          role="button"
+          tabIndex={0}
+          aria-expanded={isOpen}
+          onClick={toggle}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              toggle();
+            }
+          }}
+          className="project-card__inner brutal bg-surface cursor-pointer overflow-hidden"
+        >
           {/* Main card */}
           <div className="flex h-[260px] flex-col p-5">
             <div className="flex items-center justify-between gap-2 font-mono text-xs">
@@ -48,6 +65,7 @@ export function ProjectsGrid() {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(event) => event.stopPropagation()}
                   className="text-accent transition-colors hover:text-foreground"
                 >
                   {t("viewCode")} ↗
@@ -60,6 +78,7 @@ export function ProjectsGrid() {
             <h3 className="mt-2 text-lg font-semibold tracking-tight">
               <Link
                 href={`/projects/${project.slug}`}
+                onClick={(event) => event.stopPropagation()}
                 className="transition-colors hover:text-accent"
               >
                 {project.name}
@@ -82,15 +101,14 @@ export function ProjectsGrid() {
             </ul>
           </div>
 
-          {/* Floating image preview */}
+          {/* Preview, revealed on click. */}
           <div
             aria-hidden="true"
             className={cn(
               "grid grid-rows-[0fr] opacity-0",
               "transition-[grid-template-rows,opacity,margin-top]",
-              "duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
-              "group-hover:mt-5 group-hover:grid-rows-[1fr] group-hover:opacity-100",
-              "group-focus-within:mt-5 group-focus-within:grid-rows-[1fr] group-focus-within:opacity-100",
+              "duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
+              isOpen && "mt-5 grid-rows-[1fr] opacity-100",
             )}
           >
             <div className="min-h-0 overflow-hidden">
@@ -105,9 +123,8 @@ export function ProjectsGrid() {
                     "object-cover shadow-lg",
                     "scale-[0.97] opacity-0",
                     "transition-[transform,opacity]",
-                    "duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
-                    "group-hover:scale-100 group-hover:opacity-100",
-                    "group-focus-within:scale-100 group-focus-within:opacity-100",
+                    "duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
+                    isOpen && "scale-100 opacity-100",
                   )}
                 />
               </div>

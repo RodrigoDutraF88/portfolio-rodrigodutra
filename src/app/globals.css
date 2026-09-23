@@ -88,9 +88,8 @@
     scroll-behavior: auto;
   }
 
-  /* Keep the press and hover feedback, but apply them instantly. */
-  .brutal-press,
-  .project-card__preview {
+  /* Keep the press feedback, but apply it instantly. */
+  .brutal-press {
     transition: none;
   }
 }
@@ -148,41 +147,6 @@
   background: color-mix(in srgb, var(--brand, var(--accent)) 15%, var(--surface));
   padding: 0.3rem 0.55rem;
   line-height: 1;
-}
-
-/* Project card: on hover or focus the card itself expands, growing a preview
-   image out of its own bottom edge as one continuous surface (one stroke, one
-   drop-shadow). The preview is part of the card's flow, so the card gets taller
-   and the rows below it move down in response, smoothly. */
-.project-card {
-  filter: drop-shadow(5px 5px 0 var(--ink));
-}
-
-.project-card__inner {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border: 2px solid var(--stroke);
-  border-radius: 10px;
-  background: var(--surface);
-}
-
-.project-card__preview {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.project-card:hover .project-card__preview,
-.project-card:focus-within .project-card__preview {
-  height: 150px;
-}
-
-.project-card__img {
-  display: block;
-  height: 150px;
-  width: 100%;
-  object-fit: cover;
 }
 
 /* Command palette (cmdk is headless, so the shell is styled here). */
