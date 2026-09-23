@@ -6,8 +6,8 @@
     "resume": "CV"
   },
   "hero": {
-    "role": "Software engineer and student at UnB",
-    "tagline": "I build full stack apps and enjoy systems work, from the browser to the terminal.",
+    "role": "Full stack developer and Software Engineering student at UnB",
+    "tagline": "Passionate about technology, development, and continuous learning.",
     "viewProjects": "View projects",
     "getInTouch": "Get in touch"
   },
@@ -15,7 +15,7 @@
     "label": "about",
     "lead": "Hi! My name is Rodrigo Dutra.",
     "body": "I'm a Software Engineering student at the University of Brasília (UnB), currently in my fifth semester, and part of CJR, UnB's computing junior enterprise, where I work on real projects for clients and learn firsthand how team development works.",
-    "body2": "I'm passionate about technology and continuous learning; I believe getting a little better every day is the secret to becoming a good professional. My main focus is the Node.js and TypeScript ecosystem, and I've delivered several full-stack projects from start to finish, from the PostgreSQL data model to containerized deployment with Docker and CI/CD on GitHub Actions. I also have experience with agile methods (Scrum and XP), technical documentation, and multidisciplinary teamwork, plus I keep a homelab where I apply infrastructure and cloud concepts. Besides programming languages, I speak English and Italian fluently.",
+    "body2": "I'm passionate about technology and continuous learning, and I believe that getting a little better every day is the secret to becoming a good professional. My main focus is the Node.js and TypeScript ecosystem, and I've delivered several full stack projects from start to finish, from the PostgreSQL data model to containerized deployment with Docker and CI/CD on GitHub Actions. I also have experience with agile methods (Scrum and XP), technical documentation, and multidisciplinary teamwork, plus I keep a homelab where I apply infrastructure and cloud concepts. Besides programming languages, I speak English and Italian fluently.",
     "location": "Brasília, Brazil"
   },
   "skills": {
@@ -33,38 +33,12 @@
       "systems": "Where the code runs: Linux, containers, and version control."
     }
   },
-  "systems": {
-    "label": "systems",
-    "intro": "From the browser to the server: where the code runs and how it's built.",
-    "cards": {
-      "homelab": {
-        "title": "Homelab",
-        "body": "I run my self-hosted development environment on Fedora Linux, with services in Docker, a reverse proxy, monitoring, and reproducible backups."
-      },
-      "lowlevel": {
-        "title": "Low level",
-        "body": "At UnB I work close to the metal: data structures in C and lexical and syntax analysis in compilers."
-      }
-    },
-    "github": {
-      "label": "github",
-      "repos": "repositories",
-      "stars": "stars",
-      "profile": "View on GitHub",
-      "unavailable": "Couldn't load GitHub data right now."
-    }
-  },
   "projects": {
     "label": "projects",
     "intro": "A selection of what I've built, from full stack to the terminal and infrastructure.",
     "filterLabel": "Filter projects",
     "viewCode": "View code",
-    "caseStudy": "Read case study",
     "private": "Private repo",
-    "back": "Back to projects",
-    "overviewLabel": "the project",
-    "stackLabel": "stack",
-    "notFound": "Project not found.",
     "filters": {
       "all": "All",
       "fullstack": "Full stack",
@@ -74,42 +48,53 @@
     },
     "items": {
       "bookshelf": {
-        "description": "Full stack app to manage a personal library and track reading habits, with Google Books search and Gemini-powered recommendations.",
-        "overview": "Bookshelf App is a full stack app to manage a personal library and track reading habits: catalog books, log progress, add ratings and notes, and see stats. I integrated the Google Books API for search and Google Gemini for personalized recommendations. It's built with Next.js, tRPC, Prisma, and PostgreSQL, with Auth.js, Docker, GitHub Actions, Vitest tests, and a Vercel deploy, aiming for practices close to production."
+        "description": "Full stack app to manage a personal library and track reading habits, with Google Books search and Gemini-powered recommendations."
       },
       "algocards": {
-        "description": "Flashcards for algorithms and data structures using FSRS-6 spaced repetition to schedule reviews and prep for technical interviews.",
-        "overview": "AlgoCards is a flashcards platform for studying algorithms and data structures, focused on interview prep. It uses FSRS-6 spaced repetition to decide when each card is due, with support for code and complexity cards. I implemented and tested my own FSRS module with property-based tests and reference cases, on top of Next.js, tRPC, Prisma, and PostgreSQL."
+        "description": "Flashcards for algorithms and data structures, using FSRS-6 spaced repetition to schedule reviews and prepare for technical interviews."
       },
       "stockio": {
-        "description": "Marketplace backend covering users, stores, products, and categories, built during the CJR trainee process, with JWT auth and password recovery.",
-        "overview": "Stock.io is a marketplace backend I built during the CJR trainee process, covering users, stores, products, and categories. I implemented JWT authentication and email-based password recovery, practicing API structure, ORM, and environment variables. It was built with NestJS, TypeScript, Prisma, and PostgreSQL."
+        "description": "Marketplace backend covering users, stores, products, and categories, built during the CJR trainee process, with JWT auth and password recovery."
       },
       "homelab": {
-        "description": "Self-hosted development environment on Fedora Linux, running services with Docker, a reverse proxy, monitoring, and reproducible backups.",
-        "overview": "Dev Homelab is my personal environment for studying infrastructure, Docker, and DevOps. I turned a MacBook Air into a server on Fedora Linux, hosting PostgreSQL, Redis, Traefik, Portainer, Prometheus, Grafana, and Uptime Kuma. I practiced containerization, reverse proxy, TLS, Docker networks, monitoring, backups, and secret management, using Docker Compose and scripts to keep it reproducible."
+        "description": "Self-hosted development environment on Fedora Linux, with services in Docker, a reverse proxy, monitoring, and reproducible backups."
       },
       "piggyme": {
-        "description": "Personal finance app with income, expenses, goals, and dashboards, built as a team for the Software Development Methods course at UnB.",
-        "overview": "PiggyMe is a personal finance app built as a team (the Brooks team) for the Software Development Methods course at UnB. It handles income and expenses, financial goals, and tracking through dashboards and charts, with gamification elements. I worked with Node.js, Express, MySQL, and JavaScript, plus JWT, bcrypt, and Nodemailer."
+        "description": "Personal finance app with income, expenses, goals, and dashboards, built as a team for the Software Development Methods course at UnB."
       },
       "unitask": {
-        "description": "Full stack task manager with auth, a calendar, and a weekly activity chart drawn with the Canvas API, no external libraries.",
-        "overview": "UniTask is a full stack task manager built with a classmate. It lets you register and authenticate users, create tasks with dates, view them in a calendar, and see a weekly activity chart and a progress summary. I used JavaScript, Express, JWT, bcrypt, and Supabase, and drew the chart directly with the Canvas API, no external libraries."
+        "description": "Full stack task manager with auth, a calendar, and a weekly activity chart drawn with the Canvas API, no external libraries."
       },
       "budgetpro": {
-        "description": "Personal finance dashboard in vanilla JS: income, expenses, a chart, and live BRL/USD conversion via the Frankfurter API.",
-        "overview": "BudgetPro is a personal finance dashboard in plain HTML, CSS, and JavaScript. You can add and delete income and expenses, track balance and totals, filter and sort transactions, view a chart, and convert BRL/USD in real time via the Frankfurter API. It consolidated fundamentals like the Fetch API, async/await, DOM manipulation, Chart.js, localStorage, CSV export, CSS Grid, and the BEM methodology."
+        "description": "Personal finance dashboard in vanilla JavaScript: income, expenses, a chart, and live BRL/USD conversion via the Frankfurter API."
       },
       "atividadeDocker": {
-        "description": "CJR Docker track exercise: containerizing a message-board API with PostgreSQL, multi-stage images, Compose, and publishing to GHCR.",
-        "overview": "Atividade Docker is part of CJR's Docker track and aims to containerize an app hands-on. Starting from a simple message-board API, I set up a PostgreSQL container, the API itself, and the communication between services. I practiced Dockerfiles, multi-stage images, Docker Compose, volumes, networks, and environment variables, and published images to GHCR with GitHub Actions."
+        "description": "CJR Docker track exercise: containerizing a message-board API with PostgreSQL, multi-stage images, Compose, and publishing to GHCR."
       },
       "learning": {
-        "description": "A running log of my studies and exercises through the year, from data structures and compilers to TypeScript, NestJS, and SQL.",
-        "overview": "Learning Journal 2026 is my log of studies, exercises, and projects through the year. It gathers data structures and algorithms, TypeScript, NestJS, Oracle SQL, object orientation, and compilers. The idea is to put the concepts I study in my degree into code and explore new tools, tracking my progress."
+        "description": "A running log of my studies and exercises through the year, from data structures and compilers to TypeScript, NestJS, and SQL."
+      },
+      "cinema": {
+        "description": "A command-line tool in Python to manage a cinema's screenings, rooms, and tickets from the terminal."
+      },
+      "dataStructures": {
+        "description": "Coursework and implementations from the Data Structures 1 course at UnB, from linked lists to trees, in C."
+      },
+      "deployCicd": {
+        "description": "A CJR track exercise on deployment and continuous integration and delivery, automating builds and releases with GitHub Actions."
       }
     }
+  },
+  "meta": {
+    "title": "Rodrigo Dutra — Full-stack Developer",
+    "description": "Full stack developer and Software Engineering student at UnB. I build from the database to the interface, focused on Node.js, TypeScript, and systems."
+  },
+  "contact": {
+    "label": "contact",
+    "title": "Let's build something?",
+    "body": "I'm open to new opportunities, collaborations, and good conversations. Find me here.",
+    "resume": "Download CV",
+    "linktree": "All links"
   },
   "palette": {
     "trigger": "Open command palette",
@@ -122,17 +107,6 @@
     "home": "Home",
     "styleGuide": "Style guide",
     "toggleTheme": "Toggle theme"
-  },
-  "meta": {
-    "title": "Rodrigo Dutra — Full-stack Developer",
-    "description": "Full stack developer and Software Engineering student at UnB. I build from the database to the interface, focused on Node.js, TypeScript, and systems."
-  },
-  "contact": {
-    "label": "contact",
-    "title": "Let's build something?",
-    "body": "I'm open to new opportunities, collaborations, and good conversations. Find me here.",
-    "resume": "Download CV",
-    "linktree": "All links"
   },
   "footer": {
     "builtWith": "Built with Next.js.",

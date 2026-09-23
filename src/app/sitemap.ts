@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { projects } from "@/lib/projects";
 import { siteUrl } from "@/lib/site";
 
 // Every localized route, with hreflang alternates pointing at each locale.
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ["", "/styleguide", ...projects.map((project) => `/projects/${project.slug}`)];
+  const paths = ["", "/styleguide"];
   const lastModified = new Date();
 
   return paths.map((path) => ({

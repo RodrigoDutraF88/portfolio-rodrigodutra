@@ -14,9 +14,9 @@ Status key: `todo`, `draft`, `done`.
 | Skills         | Grouped tools and languages with context | draft | draft | draft |
 | Experience     | UnB and CJR timeline (folded into About) | todo  | todo  | todo  |
 | Projects list  | Filterable cards                         | draft | draft | draft |
-| Project detail | Case studies per project                 | draft | draft | draft |
-| Systems        | Homelab, Linux, C and compilers          | draft | draft | draft |
-| GitHub         | Live activity and pinned repos           | draft | draft | draft |
+| Project detail | Case studies per project                 | todo  | todo  | todo  |
+| Systems        | Homelab, Linux, C and compilers          | todo  | todo  | todo  |
+| GitHub         | Live activity and pinned repos           | todo  | todo  | todo  |
 | Contact        | Links, email, resume                     | draft | draft | draft |
 | Footer         | Small print and secondary links          | todo  | todo  | todo  |
 

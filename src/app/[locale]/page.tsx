@@ -4,7 +4,6 @@ import { externalLinks, site } from "@/lib/site";
 import { AsciiField } from "@/components/ascii-field";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { Skills } from "@/components/skills";
-import { Systems } from "@/components/systems";
 import { Contact } from "@/components/contact";
 import { ProjectsGrid } from "@/components/projects-grid";
 import { Reveal } from "@/components/reveal";
@@ -159,8 +158,6 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           </Reveal>
         </div>
       </section>
-
-      <Systems />
 
       <Skills />
 

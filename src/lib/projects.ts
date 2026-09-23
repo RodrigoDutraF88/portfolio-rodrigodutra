@@ -16,7 +16,8 @@ export type Project = {
   repo?: string;
   category: ProjectCategory;
   tags: string[];
-  image: string;
+  // Optional preview, revealed on click. Absent when there is no screenshot yet.
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -91,6 +92,27 @@ export const projects: Project[] = [
     category: "learning",
     tags: ["TypeScript", "NestJS", "Algorithms"],
     image: "/projects/learning.svg",
+  },
+  {
+    slug: "cinema",
+    name: "Cinema CLI",
+    repo: "cli-cinema-manager",
+    category: "systems",
+    tags: ["Python", "CLI"],
+  },
+  {
+    slug: "dataStructures",
+    name: "Estruturas de Dados",
+    repo: "estrutura-de-dados-1-unb",
+    category: "learning",
+    tags: ["C", "Algorithms"],
+  },
+  {
+    slug: "deployCicd",
+    name: "Atividade Deploy CI/CD",
+    repo: "ATIVIDADE-DEPLOY-CI-CD",
+    category: "systems",
+    tags: ["CI/CD", "Deploy", "GitHub Actions"],
   },
 ];
 

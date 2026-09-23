@@ -6,8 +6,8 @@
     "resume": "CV"
   },
   "hero": {
-    "role": "Desenvolvedor Full-stack e Estudante de Engenharia de Software na UnB",
-    "tagline": "Construo aplicações full stack e gosto de sistemas, do navegador ao terminal.",
+    "role": "Desenvolvedor full stack e estudante de Engenharia de Software na UnB",
+    "tagline": "Apaixonado por tecnologia, desenvolvimento e aprendizado contínuo.",
     "viewProjects": "Ver projetos",
     "getInTouch": "Entrar em contato"
   },
@@ -15,7 +15,7 @@
     "label": "sobre",
     "lead": "Olá! Meu nome é Rodrigo Dutra.",
     "body": "Sou estudante de Engenharia de Software na Universidade de Brasília (UnB), atualmente no quinto semestre, e faço parte da CJR, empresa júnior de computação da UnB, onde trabalho em projetos reais para clientes e aprendo na prática como funciona o desenvolvimento em equipe.",
-    "body2": "Sou apaixonado por tecnologia e aprendizado continuo, creio que melhorar um pouco cada dia é o segredo para se tornar um bom profissional. Meu foco principal é o ecossistema Node.js e TypeScript, e já entreguei diversos projetos full-stack do início ao fim, do modelo de dados em PostgreSQL até deploy containerizado com Docker e CI/CD no GitHub Actions. Também tenho experiência com metodologias ágeis (Scrum e XP), documentação técnica e trabalho em equipe multidisciplinar, além de manter um homelab onde aplico conceitos de infraestrutura e cloud. Além das linguagens de programação falo inglês e italiano fluentes.",
+    "body2": "Sou apaixonado por tecnologia e aprendizado contínuo, e acredito que melhorar um pouco a cada dia é o segredo para se tornar um bom profissional. Meu foco principal é o ecossistema Node.js e TypeScript, e já entreguei diversos projetos full stack do início ao fim, do modelo de dados em PostgreSQL ao deploy containerizado com Docker e CI/CD no GitHub Actions. Também tenho experiência com metodologias ágeis (Scrum e XP), documentação técnica e trabalho em equipe multidisciplinar, além de manter um homelab onde aplico conceitos de infraestrutura e cloud. Além das linguagens de programação, falo inglês e italiano fluentemente.",
     "location": "Brasília, Brasil"
   },
   "skills": {
@@ -28,30 +28,9 @@
     },
     "context": {
       "languages": "As linguagens do dia a dia, de scripts a estruturas de dados em C.",
-      "frontend": "Interfaces rápidas e acessíveis, pensadas em componentes e tipos.",
+      "frontend": "Interfaces rápidas e acessíveis, focadas em componentes e tipos.",
       "backend": "APIs, autenticação e dados, do protótipo ao deploy.",
       "systems": "Onde o código roda: Linux, contêineres e controle de versão."
-    }
-  },
-  "systems": {
-    "label": "sistemas",
-    "intro": "Do navegador ao servidor: onde o código roda e como ele é construído.",
-    "cards": {
-      "homelab": {
-        "title": "Homelab",
-        "body": "Rodo meu ambiente de desenvolvimento self-hosted em Fedora Linux, com serviços em Docker, reverse proxy, monitoramento e backups reproduzíveis."
-      },
-      "lowlevel": {
-        "title": "Baixo nível",
-        "body": "Na UnB, trabalho perto do metal: estruturas de dados em C e análise léxica e sintática em compiladores."
-      }
-    },
-    "github": {
-      "label": "github",
-      "repos": "repositórios",
-      "stars": "estrelas",
-      "profile": "Ver no GitHub",
-      "unavailable": "Não foi possível carregar os dados do GitHub agora."
     }
   },
   "projects": {
@@ -59,12 +38,7 @@
     "intro": "Uma seleção do que construí, do full stack ao terminal e à infraestrutura.",
     "filterLabel": "Filtrar projetos",
     "viewCode": "Ver código",
-    "caseStudy": "Ver estudo de caso",
     "private": "Código privado",
-    "back": "Voltar aos projetos",
-    "overviewLabel": "o projeto",
-    "stackLabel": "stack",
-    "notFound": "Projeto não encontrado.",
     "filters": {
       "all": "Todos",
       "fullstack": "Full stack",
@@ -74,42 +48,53 @@
     },
     "items": {
       "bookshelf": {
-        "description": "Aplicação full stack para gerenciar a biblioteca pessoal e acompanhar hábitos de leitura, com busca via Google Books e recomendações com Gemini.",
-        "overview": "O Bookshelf App é uma aplicação full stack para gerenciar uma biblioteca pessoal e acompanhar hábitos de leitura: cadastrar livros, registrar progresso, adicionar avaliações e anotações e ver estatísticas. Integrei a Google Books API para busca e o Google Gemini para recomendações personalizadas. Foi construído com Next.js, tRPC, Prisma e PostgreSQL, com Auth.js, Docker, GitHub Actions, testes em Vitest e deploy na Vercel, buscando práticas próximas de produção."
+        "description": "Aplicação full stack para gerenciar a biblioteca pessoal e acompanhar hábitos de leitura, com busca via Google Books e recomendações com Gemini."
       },
       "algocards": {
-        "description": "Flashcards de algoritmos e estruturas de dados com repetição espaçada FSRS-6 para agendar revisões e preparar entrevistas técnicas.",
-        "overview": "O AlgoCards é uma plataforma de flashcards para estudar algoritmos e estruturas de dados, com foco em preparação para entrevistas. Usa repetição espaçada FSRS-6 para decidir quando revisar cada cartão, com suporte a código e cartões de complexidade. Implementei e testei o próprio módulo do FSRS com testes de propriedades e casos de referência, sobre Next.js, tRPC, Prisma e PostgreSQL."
+        "description": "Flashcards de algoritmos e estruturas de dados com repetição espaçada FSRS-6 para agendar revisões e preparar entrevistas técnicas."
       },
       "stockio": {
-        "description": "Backend de um marketplace com usuários, lojas, produtos e categorias, feito no processo trainee da CJR, com autenticação JWT e recuperação de senha.",
-        "overview": "O Stock.io é o backend de um marketplace que construí no processo trainee da CJR, cobrindo usuários, lojas, produtos e categorias. Implementei autenticação com JWT e recuperação de senha por e-mail, praticando organização de APIs, ORM e variáveis de ambiente. Foi feito com NestJS, TypeScript, Prisma e PostgreSQL."
+        "description": "Backend de um marketplace com usuários, lojas, produtos e categorias, feito no processo trainee da CJR, com autenticação JWT e recuperação de senha."
       },
       "homelab": {
-        "description": "Ambiente de desenvolvimento self-hosted em Fedora Linux, com serviços em Docker, reverse proxy, monitoramento e backups reproduzíveis.",
-        "overview": "O Dev Homelab é meu ambiente pessoal para estudar infraestrutura, Docker e DevOps. Transformei um MacBook Air em servidor com Fedora Linux, hospedando PostgreSQL, Redis, Traefik, Portainer, Prometheus, Grafana e Uptime Kuma. Pratiquei containerização, reverse proxy, TLS, redes Docker, monitoramento, backups e gerenciamento de secrets, com Docker Compose e scripts para deixar tudo reproduzível."
+        "description": "Ambiente de desenvolvimento self-hosted em Fedora Linux, com serviços em Docker, reverse proxy, monitoramento e backups reproduzíveis."
       },
       "piggyme": {
-        "description": "App de gestão financeira com receitas, despesas, metas e dashboards, feito em equipe para a disciplina de Métodos de Desenvolvimento na UnB.",
-        "overview": "O PiggyMe é uma aplicação de gestão financeira feita em equipe (time Brooks) para a disciplina de Métodos de Desenvolvimento de Software da UnB. Permite controlar receitas e despesas, criar metas e acompanhar as finanças por dashboards e gráficos, com elementos de gamificação. Trabalhei com Node.js, Express, MySQL e JavaScript, além de JWT, bcrypt e Nodemailer."
+        "description": "App de gestão financeira com receitas, despesas, metas e dashboards, feito em equipe para a disciplina de Métodos de Desenvolvimento de Software na UnB."
       },
       "unitask": {
-        "description": "Gerenciador de tarefas full stack com autenticação, calendário e um gráfico de atividade semanal feito na Canvas API, sem bibliotecas externas.",
-        "overview": "O UniTask é um gerenciador de tarefas full stack feito em dupla. Permite cadastrar e autenticar usuários, criar tarefas com datas, visualizá-las em um calendário e ver um gráfico de atividade semanal e um resumo do progresso. Usei JavaScript, Express, JWT, bcrypt e Supabase, e desenhei o gráfico direto na Canvas API, sem bibliotecas externas."
+        "description": "Gerenciador de tarefas full stack com autenticação, calendário e um gráfico de atividade semanal feito na Canvas API, sem bibliotecas externas."
       },
       "budgetpro": {
-        "description": "Dashboard de finanças pessoais em JS puro: receitas, despesas, gráfico e conversão BRL/USD em tempo real pela Frankfurter API.",
-        "overview": "O BudgetPro é um dashboard de finanças pessoais em HTML, CSS e JavaScript puro. Permite cadastrar e excluir receitas e despesas, acompanhar saldo e totais, filtrar e ordenar transações, ver um gráfico e converter BRL/USD em tempo real pela Frankfurter API. Consolidei fundamentos como Fetch API, async/await, manipulação do DOM, Chart.js, localStorage, exportação para CSV, CSS Grid e a metodologia BEM."
+        "description": "Dashboard de finanças pessoais em JavaScript puro: receitas, despesas, gráfico e conversão BRL/USD em tempo real pela Frankfurter API."
       },
       "atividadeDocker": {
-        "description": "Atividade da trilha de Docker da CJR: containerizar uma API de recados com PostgreSQL, imagens multi-stage, Compose e publicação no GHCR.",
-        "overview": "A Atividade Docker faz parte da trilha de Docker da CJR e tem como objetivo containerizar uma aplicação na prática. Partindo de uma API simples de mural de recados, configurei um container PostgreSQL, a própria API e a comunicação entre os serviços. Pratiquei Dockerfiles, imagens multi-stage, Docker Compose, volumes, redes e variáveis de ambiente, além de publicar imagens no GHCR com GitHub Actions."
+        "description": "Atividade da trilha de Docker da CJR: containerização de uma API de recados com PostgreSQL, imagens multi-stage, Compose e publicação no GHCR."
       },
       "learning": {
-        "description": "Registro dos meus estudos e exercícios ao longo do ano, de estruturas de dados e compiladores a TypeScript, NestJS e SQL.",
-        "overview": "O Learning Journal 2026 é meu registro de estudos, exercícios e projetos ao longo do ano. Reúne conteúdos de estruturas de dados e algoritmos, TypeScript, NestJS, Oracle SQL, orientação a objetos e compiladores. A ideia é colocar em código os conceitos que estudo na graduação e explorar novas tecnologias, acompanhando minha evolução."
+        "description": "Registro dos meus estudos e exercícios ao longo do ano, de estruturas de dados e compiladores a TypeScript, NestJS e SQL."
+      },
+      "cinema": {
+        "description": "Ferramenta de linha de comando em Python para gerenciar sessões, salas e ingressos de um cinema pelo terminal."
+      },
+      "dataStructures": {
+        "description": "Trabalhos e implementações da disciplina de Estrutura de Dados 1 na UnB, de listas encadeadas a árvores, em C."
+      },
+      "deployCicd": {
+        "description": "Atividade da trilha da CJR sobre deploy e integração e entrega contínuas, automatizando builds e publicações com GitHub Actions."
       }
     }
+  },
+  "meta": {
+    "title": "Rodrigo Dutra — Desenvolvedor Full-stack",
+    "description": "Desenvolvedor full stack e estudante de Engenharia de Software na UnB. Construo do banco de dados à interface, com foco em Node.js, TypeScript e sistemas."
+  },
+  "contact": {
+    "label": "contato",
+    "title": "Vamos construir algo?",
+    "body": "Estou aberto a novas oportunidades, colaborações e boas conversas. Me encontre por aqui.",
+    "resume": "Baixar CV",
+    "linktree": "Todos os links"
   },
   "palette": {
     "trigger": "Abrir paleta de comandos",
@@ -122,17 +107,6 @@
     "home": "Início",
     "styleGuide": "Guia de estilo",
     "toggleTheme": "Alternar tema"
-  },
-  "meta": {
-    "title": "Rodrigo Dutra — Desenvolvedor Full-stack",
-    "description": "Desenvolvedor full stack e estudante de Engenharia de Software na UnB. Construo do banco de dados à interface, com foco em Node.js, TypeScript e sistemas."
-  },
-  "contact": {
-    "label": "contato",
-    "title": "Vamos construir algo?",
-    "body": "Estou aberto a novas oportunidades, colaborações e boas conversas. Me encontre por aqui.",
-    "resume": "Baixar CV",
-    "linktree": "Todos os links"
   },
   "footer": {
     "builtWith": "Feito com Next.js.",
