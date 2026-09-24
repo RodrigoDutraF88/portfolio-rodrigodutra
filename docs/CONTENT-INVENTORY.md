@@ -9,7 +9,7 @@ Status key: `todo`, `draft`, `done`.
 
 | Section        | Purpose                                  | pt    | en    | it    |
 | -------------- | ---------------------------------------- | ----- | ----- | ----- |
-| Hero           | Photo, name, role, one line pitch        | todo  | todo  | todo  |
+| Hero           | Photo, name, role, one line pitch        | draft | draft | draft |
 | About          | Who I am, full stack and systems story   | draft | draft | draft |
 | Skills         | Grouped tools and languages with context | draft | draft | draft |
 | Experience     | UnB and CJR timeline (folded into About) | todo  | todo  | todo  |
@@ -18,7 +18,7 @@ Status key: `todo`, `draft`, `done`.
 | Systems        | Homelab, Linux, C and compilers          | todo  | todo  | todo  |
 | GitHub         | Live activity and pinned repos           | todo  | todo  | todo  |
 | Contact        | Links, email, resume                     | draft | draft | draft |
-| Footer         | Small print and secondary links          | todo  | todo  | todo  |
+| Footer         | Small print and secondary links          | draft | draft | draft |
 
 ## Projects to feature
 
