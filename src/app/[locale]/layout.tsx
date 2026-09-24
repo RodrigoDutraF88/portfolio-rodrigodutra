@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
@@ -75,6 +75,14 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+// Match the browser chrome to the page background in each color scheme.
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c0f14" },
+  ],
+};
+
 export default async function LocaleLayout({
   children,
   params,
@@ -88,6 +96,7 @@ export default async function LocaleLayout({
   }
   setRequestLocale(locale);
   const messages = await getMessages();
+  const t = await getTranslations("a11y");
 
   return (
     <html
@@ -114,10 +123,15 @@ export default async function LocaleLayout({
             }),
           }}
         />
+        <a href="#content" className="skip-link">
+          {t("skipToContent")}
+        </a>
         <NextIntlClientProvider messages={messages}>
           <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col border-x-2 border-[var(--stroke)]">
             <SiteHeader />
-            <div className="flex flex-1 flex-col">{children}</div>
+            <main id="content" tabIndex={-1} className="flex flex-1 flex-col focus:outline-none">
+              {children}
+            </main>
             <SiteFooter />
           </div>
         </NextIntlClientProvider>

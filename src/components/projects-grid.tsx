@@ -110,10 +110,13 @@ export function ProjectsGrid() {
             >
               <div className="min-h-0 overflow-hidden">
                 <div className="px-2 pb-2">
+                  {/* Small, lazy, aspect-fixed preview; next/image is overkill here. */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={project.image}
                     alt=""
                     loading="lazy"
+                    decoding="async"
                     className={cn(
                       "block aspect-video w-full rounded-lg",
                       "border border-[var(--border)]",

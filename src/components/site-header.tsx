@@ -6,6 +6,7 @@ import { resumeHref, sections } from "@/lib/site";
 
 export async function SiteHeader() {
   const t = await getTranslations("nav");
+  const tA11y = await getTranslations("a11y");
 
   return (
     <header className="bg-background/80 sticky top-0 z-40 border-b border-[var(--border)] backdrop-blur">
@@ -14,7 +15,10 @@ export async function SiteHeader() {
           <span className="text-accent">~</span>/rodrigo
         </a>
 
-        <nav aria-label="Seções" className="text-muted hidden items-center gap-5 text-sm sm:flex">
+        <nav
+          aria-label={tA11y("primaryNav")}
+          className="text-muted hidden items-center gap-5 text-sm sm:flex"
+        >
           {sections.map((id) => (
             <a key={id} href={`#${id}`} className="hover:text-foreground transition-colors">
               {t(id)}

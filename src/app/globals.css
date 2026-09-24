@@ -110,6 +110,26 @@
   animation: cursor-blink 1.1s step-end infinite;
 }
 
+/* Skip link: off-screen until focused, then a visible chip at the top left. */
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 60;
+  transform: translateY(-150%);
+  transition: transform 0.15s ease;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-foreground);
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 /* Neobrutalist primitives: a solid stroke and a hard offset shadow. Used
    sparingly on cards, badges, and buttons so the terminal calm stays intact. */
 .brutal {

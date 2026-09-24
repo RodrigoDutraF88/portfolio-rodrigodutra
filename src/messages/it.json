@@ -5,6 +5,10 @@
     "contact": "Contatti",
     "resume": "CV"
   },
+  "a11y": {
+    "skipToContent": "Salta al contenuto",
+    "primaryNav": "Sezioni"
+  },
   "hero": {
     "role": "Sviluppatore full stack e studente di Ingegneria del Software alla UnB",
     "tagline": "Appassionato di tecnologia, sviluppo e apprendimento continuo.",

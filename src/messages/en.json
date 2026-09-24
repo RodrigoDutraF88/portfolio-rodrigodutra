@@ -5,8 +5,12 @@
     "contact": "Contact",
     "resume": "CV"
   },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "primaryNav": "Sections"
+  },
   "hero": {
-    "role": "Full stack developer and Software Engineering student at UnB",
+    "role": "Full-stack developer and Software Engineering student at UnB",
     "tagline": "Passionate about technology, development, and continuous learning.",
     "viewProjects": "View projects",
     "getInTouch": "Get in touch"
