@@ -127,7 +127,7 @@ export default async function LocaleLayout({
           {t("skipToContent")}
         </a>
         <NextIntlClientProvider messages={messages}>
-          <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col border-x-2 border-[var(--stroke)]">
+          <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col border-x-2 border-[var(--stroke)]">
             <SiteHeader />
             <main id="content" tabIndex={-1} className="flex flex-1 flex-col focus:outline-none">
               {children}

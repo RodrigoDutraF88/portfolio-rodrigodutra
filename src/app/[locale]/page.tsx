@@ -13,6 +13,7 @@ const revealStyle = (ms: number) => ({ "--reveal-delay": `${ms}ms` }) as React.C
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+
   const t = await getTranslations("hero");
   const tAbout = await getTranslations("about");
   const tProjects = await getTranslations("projects");
@@ -27,7 +28,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <AsciiField className="size-full opacity-60" />
         </div>
 
-        <div className="mx-auto w-full max-w-2xl px-4 py-16 text-center sm:px-6">
+        <div className="mx-auto w-full max-w-3xl px-4 py-16 text-center sm:px-6">
           <div
             data-reveal="photo"
             style={revealStyle(0)}
@@ -46,6 +47,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <p data-reveal style={revealStyle(590)} className="text-muted font-mono text-sm">
             <span className="text-accent">~/rodrigo</span> $ whoami
           </p>
+
           <h1
             data-reveal
             style={revealStyle(670)}
@@ -54,13 +56,15 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             Rodrigo Dutra
             <span className="cursor-blink text-accent ml-1 inline-block">▋</span>
           </h1>
+
           <p data-reveal style={revealStyle(1150)} className="mt-3 text-lg">
             {t("role")}
           </p>
+
           <p
             data-reveal
             style={revealStyle(1230)}
-            className="text-muted mx-auto mt-3 max-w-xl text-base"
+            className="text-muted mx-auto mt-3 max-w-3xl text-base"
           >
             {t("tagline")}
           </p>
@@ -76,6 +80,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             >
               {t("viewProjects")}
             </a>
+
             <a
               href="https://linktr.ee/rodrigodutra_"
               className="bg-surface brutal brutal-press rounded-lg px-7 py-3.5 text-base font-semibold"
@@ -105,32 +110,37 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       <section className="border-t border-[var(--border)] py-8">
-        <Reveal className="mx-auto mb-4 max-w-2xl px-4 sm:px-6">
+        <Reveal className="mx-auto mb-4 max-w-3xl px-4 sm:px-6">
           <p className="text-muted font-mono text-xs tracking-widest uppercase">
-            <span className="text-accent">{"// "}</span>stack
+            <span className="text-accent">{"// "}</span>
+            stack
           </p>
         </Reveal>
+
         <Reveal delay={120}>
           <LogoMarquee />
         </Reveal>
       </section>
 
       <section id="about" className="border-t border-[var(--border)] py-14">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <Reveal>
             <p className="text-muted font-mono text-xs tracking-widest uppercase">
               <span className="text-accent">{"// "}</span>
               {tAbout("label")}
             </p>
           </Reveal>
+
           <Reveal delay={80}>
             <article className="brutal bg-surface mt-5 p-6 sm:p-7">
               <p className="text-xl font-semibold tracking-tight">{tAbout("lead")}</p>
+
               {(tAbout.raw("paragraphs") as string[]).map((paragraph, index) => (
                 <p key={index} className="text-muted mt-3 leading-relaxed">
                   {paragraph}
                 </p>
               ))}
+
               <div className="mt-5 flex flex-wrap items-center gap-2 font-mono text-xs">
                 <span
                   className="pill"
@@ -138,7 +148,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 >
                   @{site.handle}
                 </span>
-                <span className="pill" style={{ "--brand": "#f59e0b" } as React.CSSProperties}>
+
+                <span
+                  className="pill"
+                  style={{ "--brand": "#f59e0b" } as React.CSSProperties}
+                >
                   {tAbout("location")}
                 </span>
               </div>
@@ -148,7 +162,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       <section id="projects" className="border-t border-[var(--border)] py-14">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <Reveal>
             <p className="text-muted font-mono text-xs tracking-widest uppercase">
               <span className="text-accent">{"// "}</span>
@@ -156,6 +170,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </p>
             <br />
           </Reveal>
+
           <Reveal delay={80}>
             <ProjectsGrid />
           </Reveal>
@@ -168,3 +183,4 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     </>
   );
 }
+
