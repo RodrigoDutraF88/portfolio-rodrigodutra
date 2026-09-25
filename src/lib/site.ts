@@ -6,6 +6,9 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/rodrigodutra8",
   leetcode: "https://leetcode.com/u/Rodrigo88/",
   linktree: "https://linktr.ee/rodrigodutra_",
+  email: "rodrigodutraf88@gmail.com",
+  // E.164 without the plus, for wa.me. Displayed as +55 (61) 99997-1502.
+  whatsapp: "5561999971502",
 } as const;
 
 // Canonical production origin, used for metadata, sitemap, and Open Graph.

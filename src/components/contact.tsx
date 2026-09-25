@@ -56,6 +56,29 @@ export async function Contact() {
             ))}
           </ul>
         </Reveal>
+
+        <Reveal delay={240}>
+          <div className="mt-6 flex flex-col gap-2 font-mono text-sm">
+            <a
+              href={`mailto:${site.email}`}
+              className="hover:text-accent inline-flex items-center gap-2 transition-colors"
+            >
+              <span className="text-accent" aria-hidden="true">
+                ✉
+              </span>
+              <span>{site.email}</span>
+            </a>
+            <a
+              href={`https://wa.me/${site.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent inline-flex items-center gap-2 transition-colors"
+            >
+              <span className="text-accent">WhatsApp</span>
+              <span>+55 (61) 99997-1502</span>
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

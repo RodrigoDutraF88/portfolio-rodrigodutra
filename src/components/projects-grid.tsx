@@ -104,7 +104,7 @@ export function ProjectsGrid() {
               className={cn(
                 "grid grid-rows-[0fr] opacity-0",
                 "transition-[grid-template-rows,opacity,margin-top]",
-                "duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
+                "duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none",
                 isOpen && "mt-5 grid-rows-[1fr] opacity-100",
               )}
             >
@@ -123,7 +123,7 @@ export function ProjectsGrid() {
                       "object-cover shadow-lg",
                       "scale-[0.97] opacity-0",
                       "transition-[transform,opacity]",
-                      "duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
+                      "duration-[1100ms] ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none",
                       isOpen && "scale-100 opacity-100",
                     )}
                   />

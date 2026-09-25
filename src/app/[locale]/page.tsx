@@ -72,13 +72,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           >
             <a
               href="#projects"
-              className="bg-accent text-accent-foreground brutal brutal-press rounded-lg px-4 py-2 text-sm font-medium"
+              className="bg-accent text-accent-foreground brutal brutal-press rounded-lg px-7 py-3.5 text-base font-semibold"
             >
               {t("viewProjects")}
             </a>
             <a
               href="https://linktr.ee/rodrigodutra_"
-              className="bg-surface brutal brutal-press rounded-lg px-4 py-2 text-sm font-medium"
+              className="bg-surface brutal brutal-press rounded-lg px-7 py-3.5 text-base font-semibold"
             >
               {t("getInTouch")}
             </a>

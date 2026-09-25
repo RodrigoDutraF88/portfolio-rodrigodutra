@@ -83,7 +83,6 @@ export const projects: Project[] = [
     repo: "ATIVIDADE-DOCKER",
     category: "systems",
     tags: ["Docker", "Compose", "GitHub Actions", "GHCR"],
-    image: "/projects/atividade-docker.svg",
   },
   {
     slug: "learning",
@@ -91,7 +90,6 @@ export const projects: Project[] = [
     repo: "learning-journal-2026",
     category: "learning",
     tags: ["TypeScript", "NestJS", "Algorithms"],
-    image: "/projects/learning.svg",
   },
   {
     slug: "cinema",

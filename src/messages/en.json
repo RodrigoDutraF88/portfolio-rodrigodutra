@@ -113,7 +113,6 @@
     "toggleTheme": "Toggle theme"
   },
   "footer": {
-    "builtWith": "Built with Next.js.",
     "backToTop": "Back to top"
   }
 }
