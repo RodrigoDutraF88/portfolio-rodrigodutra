@@ -18,8 +18,13 @@
   "about": {
     "label": "sobre",
     "lead": "Olá! Meu nome é Rodrigo Dutra.",
-    "body": "Sou estudante de Engenharia de Software na Universidade de Brasília (UnB), atualmente no quinto semestre, e faço parte da CJR, empresa júnior de computação da UnB, onde trabalho em projetos reais para clientes e aprendo na prática como funciona o desenvolvimento em equipe.",
-    "body2": "Sou apaixonado por tecnologia e aprendizado contínuo, e acredito que melhorar um pouco a cada dia é o segredo para se tornar um bom profissional. Meu foco principal é o ecossistema Node.js e TypeScript, e já entreguei diversos projetos full stack do início ao fim, do modelo de dados em PostgreSQL ao deploy containerizado com Docker e CI/CD no GitHub Actions. Também tenho experiência com metodologias ágeis (Scrum e XP), documentação técnica e trabalho em equipe multidisciplinar, além de manter um homelab onde aplico conceitos de infraestrutura e cloud. Além das linguagens de programação, falo inglês e italiano fluentemente.",
+    "paragraphs": [
+      "Sou estudante de Engenharia de Software na Universidade de Brasília (UnB), atualmente no quinto semestre, e faço parte da CJR, Empresa Júnior de Computação da UnB, onde atuo no desenvolvimento de projetos reais para clientes.",
+      "Sou apaixonado por tecnologia e aprendizado contínuo, com foco principal no ecossistema Node.js e TypeScript. Já desenvolvi projetos full-stack do início ao fim, trabalhando com PostgreSQL, Docker e CI/CD com GitHub Actions, além de ter experiência com metodologias ágeis, documentação técnica e trabalho em equipe.",
+      "Na CJR, além de atuar como desenvolvedor, faço parte do Núcleo de Desenvolvimento e Pesquisa, na Coordenadoria de Capacitação Contínua, onde contribuo para a criação de trilhas de capacitação sobre temas como Docker, Deploy e CI/CD.",
+      "Desde cedo, tenho interesse por resolução de problemas e tecnologia. Durante minha formação no Colégio Militar de Brasília, participei de competições de matemática, e hoje continuo desenvolvendo esse lado por meio de hackathons, projetos pessoais e estudos de algoritmos, tendo resolvido mais de 130 questões no LeetCode.",
+      "Também tive a oportunidade de morar na Itália por dois anos durante minha formação escolar, onde cursei Terza Media & Liceo 1 Linguistico Europeo (Indirizzo Giuridico-Economico), experiência que ampliou minha capacidade de adaptação e meu contato com diferentes culturas. Falo português, inglês e italiano."
+    ],
     "location": "Brasília, Brasil"
   },
   "skills": {

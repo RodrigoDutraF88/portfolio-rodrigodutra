@@ -18,8 +18,13 @@
   "about": {
     "label": "about",
     "lead": "Hi! My name is Rodrigo Dutra.",
-    "body": "I'm a Software Engineering student at the University of Brasília (UnB), currently in my fifth semester, and part of CJR, UnB's computing junior enterprise, where I work on real projects for clients and learn firsthand how team development works.",
-    "body2": "I'm passionate about technology and continuous learning, and I believe that getting a little better every day is the secret to becoming a good professional. My main focus is the Node.js and TypeScript ecosystem, and I've delivered several full stack projects from start to finish, from the PostgreSQL data model to containerized deployment with Docker and CI/CD on GitHub Actions. I also have experience with agile methods (Scrum and XP), technical documentation, and multidisciplinary teamwork, plus I keep a homelab where I apply infrastructure and cloud concepts. Besides programming languages, I speak English and Italian fluently.",
+    "paragraphs": [
+      "I'm a Software Engineering student at the University of Brasília (UnB), currently in my fifth semester, and a member of CJR, UnB's computing junior enterprise, where I work on real projects for clients.",
+      "I'm passionate about technology and continuous learning, focused mainly on the Node.js and TypeScript ecosystem. I've built full-stack projects end to end, working with PostgreSQL, Docker, and CI/CD with GitHub Actions, along with experience in agile methods, technical documentation, and teamwork.",
+      "At CJR, besides working as a developer, I'm part of the Research and Development Center, in the Continuous Training Coordination, where I help create training tracks on topics like Docker, deployment, and CI/CD.",
+      "I've been drawn to problem-solving and technology from an early age. During my studies at the Military School of Brasília, I took part in math competitions, and today I keep developing that side through hackathons, personal projects, and algorithm study, having solved more than 130 problems on LeetCode.",
+      "I also had the chance to live in Italy for two years during my school years, where I studied Terza Media & Liceo 1 Linguistico Europeo (Indirizzo Giuridico-Economico), an experience that broadened my adaptability and my contact with different cultures. I speak Portuguese, English, and Italian."
+    ],
     "location": "Brasília, Brazil"
   },
   "skills": {

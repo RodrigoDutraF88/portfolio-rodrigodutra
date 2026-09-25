@@ -2,6 +2,14 @@ import { getTranslations } from "next-intl/server";
 import { externalLinks, resumeHref, site } from "@/lib/site";
 import { Reveal } from "@/components/reveal";
 
+// All contact methods share one card pattern: profiles open in a new tab,
+// email opens the mail client, WhatsApp opens the chat.
+const contactLinks = [
+  ...externalLinks.map((link) => ({ ...link, external: true })),
+  { label: "Email", href: `mailto:${site.email}`, external: false },
+  { label: "WhatsApp", href: `https://wa.me/${site.whatsapp}`, external: true },
+];
+
 export async function Contact() {
   const t = await getTranslations("contact");
 
@@ -39,12 +47,11 @@ export async function Contact() {
 
         <Reveal delay={160}>
           <ul className="mt-4 grid gap-3 sm:grid-cols-3">
-            {externalLinks.map((link) => (
+            {contactLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="brutal brutal-press bg-surface flex items-center justify-between rounded-lg px-4 py-3 font-mono text-sm"
                 >
                   <span>{link.label}</span>
@@ -55,29 +62,6 @@ export async function Contact() {
               </li>
             ))}
           </ul>
-        </Reveal>
-
-        <Reveal delay={240}>
-          <div className="mt-6 flex flex-col gap-2 font-mono text-sm">
-            <a
-              href={`mailto:${site.email}`}
-              className="hover:text-accent inline-flex items-center gap-2 transition-colors"
-            >
-              <span className="text-accent" aria-hidden="true">
-                ✉
-              </span>
-              <span>{site.email}</span>
-            </a>
-            <a
-              href={`https://wa.me/${site.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-accent inline-flex items-center gap-2 transition-colors"
-            >
-              <span className="text-accent">WhatsApp</span>
-              <span>+55 (61) 99997-1502</span>
-            </a>
-          </div>
         </Reveal>
       </div>
     </section>

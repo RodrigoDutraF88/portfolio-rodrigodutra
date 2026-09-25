@@ -126,8 +126,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <Reveal delay={80}>
             <article className="brutal bg-surface mt-5 p-6 sm:p-7">
               <p className="text-xl font-semibold tracking-tight">{tAbout("lead")}</p>
-              <p className="text-muted mt-3 leading-relaxed">{tAbout("body")}</p>
-              <p className="text-muted mt-3 leading-relaxed">{tAbout("body2")}</p>
+              {(tAbout.raw("paragraphs") as string[]).map((paragraph, index) => (
+                <p key={index} className="text-muted mt-3 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
               <div className="mt-5 flex flex-wrap items-center gap-2 font-mono text-xs">
                 <span
                   className="pill"
