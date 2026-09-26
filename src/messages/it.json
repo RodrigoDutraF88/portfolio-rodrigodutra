@@ -31,15 +31,15 @@
     "label": "competenze",
     "groups": {
       "languages": "Linguaggi",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "systems": "Sistemi e strumenti"
+      "frameworks": "Framework",
+      "databases": "Database",
+      "tools": "Strumenti e infrastruttura"
     },
     "context": {
       "languages": "I linguaggi che uso ogni giorno, dagli script alle strutture dati in C.",
-      "frontend": "Interfacce veloci e accessibili, focalizzate su componenti e tipi.",
-      "backend": "API, autenticazione e dati, dal prototipo al deploy.",
-      "systems": "Dove gira il codice: Linux, container e controllo di versione."
+      "frameworks": "Ciò con cui costruisco, dal backend al frontend, con tipi end-to-end.",
+      "databases": "Modellazione e persistenza di dati relazionali.",
+      "tools": "Dove gira il codice e come arriva in produzione: container, CI/CD e osservabilità."
     }
   },
   "projects": {

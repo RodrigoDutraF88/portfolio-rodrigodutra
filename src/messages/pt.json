@@ -31,15 +31,15 @@
     "label": "skills",
     "groups": {
       "languages": "Linguagens",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "systems": "Sistemas e ferramentas"
+      "frameworks": "Frameworks",
+      "databases": "Banco de dados",
+      "tools": "Ferramentas e infraestrutura"
     },
     "context": {
       "languages": "As linguagens do dia a dia, de scripts a estruturas de dados em C.",
-      "frontend": "Interfaces rápidas e acessíveis, focadas em componentes e tipos.",
-      "backend": "APIs, autenticação e dados, do protótipo ao deploy.",
-      "systems": "Onde o código roda: Linux, contêineres e controle de versão."
+      "frameworks": "O que uso para construir do backend ao frontend, com tipos de ponta a ponta.",
+      "databases": "Modelagem e persistência de dados relacionais.",
+      "tools": "Onde o código roda e como chega à produção: contêineres, CI/CD e observabilidade."
     }
   },
   "projects": {

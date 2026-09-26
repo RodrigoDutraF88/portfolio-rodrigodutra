@@ -37,10 +37,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <Image
               src="/rodrigo.jpg"
               alt="Rodrigo Dutra"
-              width={276}
-              height={276}
+              width={612}
+              height={616}
               priority
-              className="size-full origin-top scale-[1.4] object-cover object-top"
+              className="size-full object-cover"
             />
           </div>
 

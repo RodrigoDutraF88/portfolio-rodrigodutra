@@ -31,15 +31,15 @@
     "label": "skills",
     "groups": {
       "languages": "Languages",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "systems": "Systems and tools"
+      "frameworks": "Frameworks",
+      "databases": "Databases",
+      "tools": "Tools and infrastructure"
     },
     "context": {
       "languages": "The languages I reach for daily, from scripts to data structures in C.",
-      "frontend": "Fast, accessible interfaces, built around components and types.",
-      "backend": "APIs, auth, and data, from prototype to deploy.",
-      "systems": "Where the code runs: Linux, containers, and version control."
+      "frameworks": "What I build with, from backend to frontend, with end-to-end types.",
+      "databases": "Modeling and persisting relational data.",
+      "tools": "Where the code runs and how it ships: containers, CI/CD, and observability."
     }
   },
   "projects": {

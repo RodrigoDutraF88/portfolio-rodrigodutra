@@ -4,28 +4,78 @@ import {
   siJavascript,
   siPython,
   siC,
-  siReact,
+  siGnubash,
   siNextdotjs,
-  siTailwindcss,
-  siNodedotjs,
+  siReact,
   siNestjs,
+  siExpress,
+  siNodedotjs,
+  siTailwindcss,
   siTrpc,
   siPrisma,
   siPostgresql,
-  siLinux,
-  siDocker,
+  siMysql,
   siGit,
+  siGithubactions,
+  siDocker,
+  siLinux,
+  siTraefikproxy,
+  siPrometheus,
+  siGrafana,
   type SimpleIcon,
 } from "simple-icons";
 import { Reveal } from "@/components/reveal";
 
-// Grouped so the badges read as context, not a wall of logos. Icon names carry
-// the labels; the group id keys the translated heading and its one line.
-const groups: { id: string; items: SimpleIcon[] }[] = [
-  { id: "languages", items: [siTypescript, siJavascript, siPython, siC] },
-  { id: "frontend", items: [siReact, siNextdotjs, siTailwindcss] },
-  { id: "backend", items: [siNodedotjs, siNestjs, siTrpc, siPrisma, siPostgresql] },
-  { id: "systems", items: [siLinux, siDocker, siGit] },
+type Skill = { label: string; icon?: SimpleIcon };
+
+// icon-backed skill (optional label override); text-only skill (no brand icon).
+const ic = (icon: SimpleIcon, label?: string): Skill => ({ label: label ?? icon.title, icon });
+const txt = (label: string): Skill => ({ label });
+
+// Mirrors the "Competências técnicas" section of the résumé.
+const groups: { id: string; items: Skill[] }[] = [
+  {
+    id: "languages",
+    items: [
+      ic(siTypescript),
+      ic(siJavascript),
+      ic(siPython),
+      ic(siC),
+      txt("C#"),
+      txt("SQL"),
+      ic(siGnubash, "Bash"),
+    ],
+  },
+  {
+    id: "frameworks",
+    items: [
+      ic(siNextdotjs),
+      ic(siReact),
+      ic(siNestjs),
+      ic(siExpress),
+      ic(siNodedotjs),
+      ic(siTailwindcss, "Tailwind CSS"),
+      ic(siTrpc),
+      ic(siPrisma),
+      txt("Auth.js"),
+    ],
+  },
+  {
+    id: "databases",
+    items: [ic(siPostgresql), ic(siMysql)],
+  },
+  {
+    id: "tools",
+    items: [
+      ic(siGit),
+      ic(siGithubactions),
+      ic(siDocker),
+      ic(siLinux),
+      ic(siTraefikproxy, "Traefik"),
+      ic(siPrometheus),
+      ic(siGrafana),
+    ],
+  },
 ];
 
 export async function Skills() {
@@ -52,22 +102,28 @@ export async function Skills() {
                   {t(`context.${group.id}`)}
                 </p>
                 <ul className="mt-4 flex flex-wrap gap-2">
-                  {group.items.map((icon) => (
+                  {group.items.map((skill) => (
                     <li
-                      key={icon.slug}
+                      key={skill.label}
                       className="pill font-mono text-xs"
-                      style={{ "--brand": `#${icon.hex}` } as React.CSSProperties}
+                      style={
+                        {
+                          "--brand": skill.icon ? `#${skill.icon.hex}` : "var(--accent)",
+                        } as React.CSSProperties
+                      }
                     >
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="14"
-                        height="14"
-                        fill="var(--brand)"
-                        aria-hidden="true"
-                      >
-                        <path d={icon.path} />
-                      </svg>
-                      <span>{icon.title}</span>
+                      {skill.icon ? (
+                        <svg
+                          viewBox="0 0 24 24"
+                          width="14"
+                          height="14"
+                          fill="var(--brand)"
+                          aria-hidden="true"
+                        >
+                          <path d={skill.icon.path} />
+                        </svg>
+                      ) : null}
+                      <span>{skill.label}</span>
                     </li>
                   ))}
                 </ul>
