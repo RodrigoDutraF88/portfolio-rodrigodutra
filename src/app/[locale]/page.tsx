@@ -40,7 +40,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               width={276}
               height={276}
               priority
-              className="size-full object-cover"
+              className="size-full origin-top scale-[1.4] object-cover object-top"
             />
           </div>
 
@@ -149,10 +149,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                   @{site.handle}
                 </span>
 
-                <span
-                  className="pill"
-                  style={{ "--brand": "#f59e0b" } as React.CSSProperties}
-                >
+                <span className="pill" style={{ "--brand": "#f59e0b" } as React.CSSProperties}>
                   {tAbout("location")}
                 </span>
               </div>
@@ -183,4 +180,3 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     </>
   );
 }
-

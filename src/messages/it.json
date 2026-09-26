@@ -10,7 +10,7 @@
     "primaryNav": "Sezioni"
   },
   "hero": {
-    "role": "Sviluppatore full stack e studente di Ingegneria del Software alla UnB",
+    "role": "Full-stack Developer e studente di Software Engineering alla UnB",
     "tagline": "Appassionato di tecnologia, sviluppo e apprendimento continuo.",
     "viewProjects": "Vedi i progetti",
     "getInTouch": "Mettiti in contatto"
@@ -19,7 +19,7 @@
     "label": "chi sono",
     "lead": "Ciao! Mi chiamo Rodrigo Dutra.",
     "paragraphs": [
-      "Sono uno studente di Ingegneria del Software all'Università di Brasília (UnB), attualmente al quinto semestre, e faccio parte della CJR, l'impresa junior di informatica della UnB, dove lavoro allo sviluppo di progetti reali per i clienti.",
+      "Sono uno studente di Software Engineering all'Università di Brasília (UnB), attualmente al quinto semestre, e faccio parte della CJR, la Junior Enterprise di informatica della UnB, dove lavoro allo sviluppo di progetti reali per i clienti.",
       "Sono appassionato di tecnologia e apprendimento continuo, con un focus principale sull'ecosistema Node.js e TypeScript. Ho sviluppato progetti full-stack dall'inizio alla fine, lavorando con PostgreSQL, Docker e CI/CD con GitHub Actions, oltre ad avere esperienza con metodi agili, documentazione tecnica e lavoro di squadra.",
       "Alla CJR, oltre a lavorare come sviluppatore, faccio parte del Nucleo di Sviluppo e Ricerca, nella Coordinazione di Formazione Continua, dove contribuisco alla creazione di percorsi formativi su temi come Docker, deploy e CI/CD.",
       "Fin da piccolo mi appassionano la risoluzione dei problemi e la tecnologia. Durante gli studi al Collegio Militare di Brasília ho partecipato a competizioni di matematica, e oggi continuo a coltivare questo lato con hackathon, progetti personali e lo studio degli algoritmi, avendo risolto più di 130 problemi su LeetCode.",
@@ -95,8 +95,8 @@
     }
   },
   "meta": {
-    "title": "Rodrigo Dutra — Sviluppatore Full-stack",
-    "description": "Sviluppatore full stack e studente di Ingegneria del Software alla UnB. Costruisco dal database all'interfaccia, con focus su Node.js, TypeScript e sistemi."
+    "title": "Rodrigo Dutra — Full-stack Developer",
+    "description": "Full-stack Developer e studente di Software Engineering alla UnB. Costruisco dal database all'interfaccia, con focus su Node.js, TypeScript e sistemi."
   },
   "contact": {
     "label": "contatti",
