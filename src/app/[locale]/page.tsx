@@ -35,10 +35,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             className="bg-surface mx-auto mb-8 size-64 overflow-hidden rounded-full border border-[var(--border)] shadow-xl"
           >
             <Image
-              src="/rodrigo.jpg"
+              src="/rodrigo.png"
               alt="Rodrigo Dutra"
-              width={612}
-              height={616}
+              width={310}
+              height={660}
               priority
               className="size-full object-cover"
             />
