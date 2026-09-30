@@ -61,13 +61,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {t("role")}
           </p>
 
-          <p
+          {/* <p
             data-reveal
             style={revealStyle(1230)}
             className="text-muted mx-auto mt-3 max-w-3xl text-base"
           >
             {t("tagline")}
-          </p>
+          </p> */}
 
           <div
             data-reveal
