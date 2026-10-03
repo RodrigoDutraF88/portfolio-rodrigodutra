@@ -12,11 +12,21 @@ export const site = {
 } as const;
 
 // Canonical production origin, used for metadata, sitemap, and Open Graph.
-// Override with NEXT_PUBLIC_SITE_URL once the real domain is live.
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://rodrigodutra.dev").replace(
-  /\/$/,
-  "",
-);
+// Resolution order:
+//   1. NEXT_PUBLIC_SITE_URL — set this once the real custom domain is live.
+//   2. VERCEL_PROJECT_PRODUCTION_URL — the stable production alias Vercel
+//      injects at build/runtime (e.g. portfolio-rodrigodutra.vercel.app), so
+//      absolute OG/canonical URLs are correct on the deploy with no config.
+//   3. Local fallback for dev and non-Vercel builds.
+// Only read server-side (metadata, sitemap, robots, JSON-LD), so the Vercel
+// var need not be NEXT_PUBLIC_.
+const resolvedSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://rodrigodutra.dev");
+
+export const siteUrl = resolvedSiteUrl.replace(/\/$/, "");
 
 // Stable, language neutral section ids. Nav labels are translated separately.
 export const sections = ["about", "projects", "contact"] as const;
